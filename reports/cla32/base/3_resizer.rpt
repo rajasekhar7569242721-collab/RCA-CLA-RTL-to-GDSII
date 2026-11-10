@@ -1,0 +1,401 @@
+
+==========================================================================
+resizer report_tns
+--------------------------------------------------------------------------
+tns max 0.00
+
+==========================================================================
+resizer report_wns
+--------------------------------------------------------------------------
+wns max 0.00
+
+==========================================================================
+resizer report_worst_slack
+--------------------------------------------------------------------------
+worst slack max 2.00
+
+==========================================================================
+resizer report_clock_min_period
+--------------------------------------------------------------------------
+virtual_clk period_min = 8.00 fmax = 125.04
+
+==========================================================================
+resizer report_checks -path_delay min
+--------------------------------------------------------------------------
+Startpoint: b[18] (input port clocked by virtual_clk)
+Endpoint: sum[18] (output port clocked by virtual_clk)
+Path Group: virtual_clk
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock virtual_clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          1.00    1.00 ^ input external delay
+     1    0.00    0.10    0.00    1.00 ^ b[18] (in)
+                                         b[18] (net)
+                  0.10    0.00    1.00 ^ input42/A (sky130_fd_sc_hd__buf_1)
+     1    0.01    0.11    0.14    1.14 ^ input42/X (sky130_fd_sc_hd__buf_1)
+                                         net42 (net)
+                  0.11    0.00    1.14 ^ _242_/B (sky130_fd_sc_hd__ha_4)
+     3    0.02    0.08    0.17    1.32 ^ _242_/SUM (sky130_fd_sc_hd__ha_4)
+                                         CLA_BLOCK[4].p[2] (net)
+                  0.08    0.00    1.32 ^ _227_/B (sky130_fd_sc_hd__xnor2_4)
+     1    0.01    0.04    0.07    1.38 v _227_/Y (sky130_fd_sc_hd__xnor2_4)
+                                         net76 (net)
+                  0.04    0.00    1.38 v wire139/A (sky130_fd_sc_hd__buf_8)
+     1    0.01    0.03    0.12    1.50 v wire139/X (sky130_fd_sc_hd__buf_8)
+                                         net177 (net)
+                  0.03    0.00    1.50 v wire177/A (sky130_fd_sc_hd__buf_16)
+     1    5.00    2.56    1.69    3.19 v wire177/X (sky130_fd_sc_hd__buf_16)
+                                         sum[18] (net)
+                  2.57    0.12    3.31 v sum[18] (out)
+                                  3.31   data arrival time
+
+                  0.00    0.00    0.00   clock virtual_clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.00    0.00   clock reconvergence pessimism
+                         -1.00   -1.00   output external delay
+                                 -1.00   data required time
+-----------------------------------------------------------------------------
+                                 -1.00   data required time
+                                 -3.31   data arrival time
+-----------------------------------------------------------------------------
+                                  4.31   slack (MET)
+
+
+
+==========================================================================
+resizer report_checks -path_delay max
+--------------------------------------------------------------------------
+Startpoint: a[16] (input port clocked by virtual_clk)
+Endpoint: sum[24] (output port clocked by virtual_clk)
+Path Group: virtual_clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock virtual_clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          1.00    1.00 ^ input external delay
+     1    0.00    0.10    0.00    1.00 ^ a[16] (in)
+                                         a[16] (net)
+                  0.10    0.00    1.00 ^ input8/A (sky130_fd_sc_hd__buf_1)
+     2    0.02    0.22    0.22    1.22 ^ input8/X (sky130_fd_sc_hd__buf_1)
+                                         net8 (net)
+                  0.22    0.00    1.22 ^ _244_/A (sky130_fd_sc_hd__ha_4)
+     2    0.01    0.04    0.24    1.46 v _244_/SUM (sky130_fd_sc_hd__ha_4)
+                                         CLA_BLOCK[4].p[0] (net)
+                  0.04    0.00    1.46 v _137_/A (sky130_fd_sc_hd__and3_4)
+     3    0.01    0.04    0.15    1.61 v _137_/X (sky130_fd_sc_hd__and3_4)
+                                         _028_ (net)
+                  0.04    0.00    1.61 v _138_/B (sky130_fd_sc_hd__and2_4)
+     3    0.02    0.04    0.17    1.78 v _138_/X (sky130_fd_sc_hd__and2_4)
+                                         _029_ (net)
+                  0.04    0.00    1.78 v _150_/A1 (sky130_fd_sc_hd__a221oi_4)
+     5    0.02    0.32    0.36    2.14 ^ _150_/Y (sky130_fd_sc_hd__a221oi_4)
+                                         _041_ (net)
+                  0.32    0.00    2.14 ^ _182_/A2 (sky130_fd_sc_hd__o21ai_2)
+     2    0.01    0.07    0.11    2.25 v _182_/Y (sky130_fd_sc_hd__o21ai_2)
+                                         _067_ (net)
+                  0.07    0.00    2.25 v _185_/A1 (sky130_fd_sc_hd__o21ai_2)
+     3    0.02    0.23    0.25    2.50 ^ _185_/Y (sky130_fd_sc_hd__o21ai_2)
+                                         _070_ (net)
+                  0.23    0.00    2.50 ^ _194_/A (sky130_fd_sc_hd__nand2_2)
+     1    0.01    0.07    0.08    2.58 v _194_/Y (sky130_fd_sc_hd__nand2_2)
+                                         CLA_BLOCK[6].c[0] (net)
+                  0.07    0.00    2.58 v _235_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.07    0.77    3.34 ^ _235_/SUM (sky130_fd_sc_hd__fa_4)
+                                         net83 (net)
+                  0.07    0.00    3.34 ^ wire143/A (sky130_fd_sc_hd__buf_8)
+     1    0.02    0.04    0.10    3.45 ^ wire143/X (sky130_fd_sc_hd__buf_8)
+                                         net173 (net)
+                  0.04    0.00    3.45 ^ wire173/A (sky130_fd_sc_hd__buf_16)
+     1    5.00    5.04    3.42    6.87 ^ wire173/X (sky130_fd_sc_hd__buf_16)
+                                         sum[24] (net)
+                  5.04    0.13    7.00 ^ sum[24] (out)
+                                  7.00   data arrival time
+
+                  0.00   10.00   10.00   clock virtual_clk (rise edge)
+                          0.00   10.00   clock network delay (ideal)
+                          0.00   10.00   clock reconvergence pessimism
+                         -1.00    9.00   output external delay
+                                  9.00   data required time
+-----------------------------------------------------------------------------
+                                  9.00   data required time
+                                 -7.00   data arrival time
+-----------------------------------------------------------------------------
+                                  2.00   slack (MET)
+
+
+
+==========================================================================
+resizer report_checks -unconstrained
+--------------------------------------------------------------------------
+Startpoint: a[16] (input port clocked by virtual_clk)
+Endpoint: sum[24] (output port clocked by virtual_clk)
+Path Group: virtual_clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock virtual_clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          1.00    1.00 ^ input external delay
+     1    0.00    0.10    0.00    1.00 ^ a[16] (in)
+                                         a[16] (net)
+                  0.10    0.00    1.00 ^ input8/A (sky130_fd_sc_hd__buf_1)
+     2    0.02    0.22    0.22    1.22 ^ input8/X (sky130_fd_sc_hd__buf_1)
+                                         net8 (net)
+                  0.22    0.00    1.22 ^ _244_/A (sky130_fd_sc_hd__ha_4)
+     2    0.01    0.04    0.24    1.46 v _244_/SUM (sky130_fd_sc_hd__ha_4)
+                                         CLA_BLOCK[4].p[0] (net)
+                  0.04    0.00    1.46 v _137_/A (sky130_fd_sc_hd__and3_4)
+     3    0.01    0.04    0.15    1.61 v _137_/X (sky130_fd_sc_hd__and3_4)
+                                         _028_ (net)
+                  0.04    0.00    1.61 v _138_/B (sky130_fd_sc_hd__and2_4)
+     3    0.02    0.04    0.17    1.78 v _138_/X (sky130_fd_sc_hd__and2_4)
+                                         _029_ (net)
+                  0.04    0.00    1.78 v _150_/A1 (sky130_fd_sc_hd__a221oi_4)
+     5    0.02    0.32    0.36    2.14 ^ _150_/Y (sky130_fd_sc_hd__a221oi_4)
+                                         _041_ (net)
+                  0.32    0.00    2.14 ^ _182_/A2 (sky130_fd_sc_hd__o21ai_2)
+     2    0.01    0.07    0.11    2.25 v _182_/Y (sky130_fd_sc_hd__o21ai_2)
+                                         _067_ (net)
+                  0.07    0.00    2.25 v _185_/A1 (sky130_fd_sc_hd__o21ai_2)
+     3    0.02    0.23    0.25    2.50 ^ _185_/Y (sky130_fd_sc_hd__o21ai_2)
+                                         _070_ (net)
+                  0.23    0.00    2.50 ^ _194_/A (sky130_fd_sc_hd__nand2_2)
+     1    0.01    0.07    0.08    2.58 v _194_/Y (sky130_fd_sc_hd__nand2_2)
+                                         CLA_BLOCK[6].c[0] (net)
+                  0.07    0.00    2.58 v _235_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.07    0.77    3.34 ^ _235_/SUM (sky130_fd_sc_hd__fa_4)
+                                         net83 (net)
+                  0.07    0.00    3.34 ^ wire143/A (sky130_fd_sc_hd__buf_8)
+     1    0.02    0.04    0.10    3.45 ^ wire143/X (sky130_fd_sc_hd__buf_8)
+                                         net173 (net)
+                  0.04    0.00    3.45 ^ wire173/A (sky130_fd_sc_hd__buf_16)
+     1    5.00    5.04    3.42    6.87 ^ wire173/X (sky130_fd_sc_hd__buf_16)
+                                         sum[24] (net)
+                  5.04    0.13    7.00 ^ sum[24] (out)
+                                  7.00   data arrival time
+
+                  0.00   10.00   10.00   clock virtual_clk (rise edge)
+                          0.00   10.00   clock network delay (ideal)
+                          0.00   10.00   clock reconvergence pessimism
+                         -1.00    9.00   output external delay
+                                  9.00   data required time
+-----------------------------------------------------------------------------
+                                  9.00   data required time
+                                 -7.00   data arrival time
+-----------------------------------------------------------------------------
+                                  2.00   slack (MET)
+
+
+
+==========================================================================
+resizer report_check_types -max_slew -max_cap -max_fanout -violators
+--------------------------------------------------------------------------
+max slew
+
+Pin                                    Limit    Slew   Slack
+------------------------------------------------------------
+wire196/X                               5.01    5.05   -0.04 (VIOLATED)
+wire197/X                               5.01    5.05   -0.04 (VIOLATED)
+wire182/X                               5.01    5.05   -0.04 (VIOLATED)
+wire185/X                               5.01    5.05   -0.04 (VIOLATED)
+wire170/X                               5.01    5.04   -0.04 (VIOLATED)
+wire166/X                               5.01    5.04   -0.04 (VIOLATED)
+wire169/X                               5.01    5.04   -0.04 (VIOLATED)
+wire195/X                               5.01    5.04   -0.04 (VIOLATED)
+wire190/X                               5.01    5.04   -0.03 (VIOLATED)
+wire183/X                               5.01    5.04   -0.03 (VIOLATED)
+wire191/X                               5.01    5.04   -0.03 (VIOLATED)
+wire187/X                               5.01    5.04   -0.03 (VIOLATED)
+wire175/X                               5.01    5.04   -0.03 (VIOLATED)
+wire193/X                               5.01    5.04   -0.03 (VIOLATED)
+wire184/X                               5.01    5.04   -0.03 (VIOLATED)
+wire167/X                               5.01    5.04   -0.03 (VIOLATED)
+wire189/X                               5.01    5.04   -0.03 (VIOLATED)
+wire173/X                               5.01    5.04   -0.03 (VIOLATED)
+wire171/X                               5.01    5.04   -0.03 (VIOLATED)
+wire186/X                               5.01    5.04   -0.03 (VIOLATED)
+wire194/X                               5.01    5.04   -0.03 (VIOLATED)
+wire172/X                               5.01    5.04   -0.03 (VIOLATED)
+wire174/X                               5.01    5.04   -0.03 (VIOLATED)
+wire168/X                               5.01    5.04   -0.03 (VIOLATED)
+wire188/X                               5.01    5.03   -0.03 (VIOLATED)
+wire192/X                               5.01    5.03   -0.03 (VIOLATED)
+wire179/X                               5.01    5.03   -0.03 (VIOLATED)
+wire180/X                               5.01    5.03   -0.03 (VIOLATED)
+wire177/X                               5.01    5.03   -0.03 (VIOLATED)
+wire165/X                               5.01    5.03   -0.03 (VIOLATED)
+wire178/X                               5.01    5.03   -0.03 (VIOLATED)
+wire181/X                               5.01    5.03   -0.03 (VIOLATED)
+wire176/X                               5.01    5.03   -0.03 (VIOLATED)
+
+max capacitance
+
+Pin                                    Limit     Cap   Slack
+------------------------------------------------------------
+wire167/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire168/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire183/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire184/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire189/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire190/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire191/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire193/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire194/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire171/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire172/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire173/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire174/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire175/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire186/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire187/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire166/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire169/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire170/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire182/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire185/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire195/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire196/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire197/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire165/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire176/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire177/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire178/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire179/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire180/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire181/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire188/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire192/X                               5.00    5.00   -0.00 (VIOLATED)
+
+
+==========================================================================
+resizer max_slew_check_slack
+--------------------------------------------------------------------------
+-0.03827471658587456
+
+==========================================================================
+resizer max_slew_check_limit
+--------------------------------------------------------------------------
+5.007309913635254
+
+==========================================================================
+resizer max_slew_check_slack_limit
+--------------------------------------------------------------------------
+-0.0076
+
+==========================================================================
+resizer max_fanout_check_slack
+--------------------------------------------------------------------------
+1.0000000150474662e+30
+
+==========================================================================
+resizer max_fanout_check_limit
+--------------------------------------------------------------------------
+1.0000000150474662e+30
+
+==========================================================================
+resizer max_capacitance_check_slack
+--------------------------------------------------------------------------
+-0.0017208456993103027
+
+==========================================================================
+resizer max_capacitance_check_limit
+--------------------------------------------------------------------------
+5.0
+
+==========================================================================
+resizer max_capacitance_check_slack_limit
+--------------------------------------------------------------------------
+-0.0003
+
+==========================================================================
+resizer max_slew_violation_count
+--------------------------------------------------------------------------
+max slew violation count 33
+
+==========================================================================
+resizer max_fanout_violation_count
+--------------------------------------------------------------------------
+max fanout violation count 0
+
+==========================================================================
+resizer max_cap_violation_count
+--------------------------------------------------------------------------
+max cap violation count 33
+
+==========================================================================
+resizer setup_violation_count
+--------------------------------------------------------------------------
+setup violation count 0
+
+==========================================================================
+resizer hold_violation_count
+--------------------------------------------------------------------------
+hold violation count 0
+
+==========================================================================
+resizer critical path delay
+--------------------------------------------------------------------------
+6.9974
+
+==========================================================================
+resizer critical path slack
+--------------------------------------------------------------------------
+2.0026
+
+==========================================================================
+resizer slack div critical path delay
+--------------------------------------------------------------------------
+28.619201
+
+==========================================================================
+resizer report_power
+--------------------------------------------------------------------------
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Combinational          2.15e-04   7.84e-03   1.63e-09   8.05e-03 100.0%
+Clock                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  2.15e-04   7.84e-03   1.63e-09   8.05e-03 100.0%
+                           2.7%      97.3%       0.0%

@@ -1,0 +1,252 @@
+OpenROAD 26Q4-1798-g6932b6296c 
+Features included (+) or not (-): -GPU +GUI
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 12 thread(s).
+read_liberty ./objects/binary_libs/sky130hd/sky130_fd_sc_hd__tt_025C_1v80@12800135-1794239217-af506811.blib
+read_db ./results/sky130hd/cla32/base/4_cts.odb
+read_sdc ./results/sky130hd/cla32/base/4_cts.sdc
+source /home/rajasrajas/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+pin_access
+[INFO DRT-0149] Reading tech and libs.
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer mcon
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer mcon
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via2
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via2
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via3
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via3
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via4
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via4
+
+Units:                1000
+Number of layers:     13
+Number of macros:     441
+Number of vias:       29
+Number of viarulegen: 25
+
+[INFO DRT-0150] Reading design.
+
+Design:                   cla32
+Die area:                 ( 0 0 ) ( 86485 86485 )
+Number of track patterns: 12
+Number of DEF vias:       0
+Number of components:     397
+Number of terminals:      100
+Number of snets:          2
+Number of nets:           406
+
+[INFO DRT-0167] List of default vias:
+  Layer via
+    default via: M1M2_PR
+  Layer via2
+    default via: M2M3_PR
+  Layer via3
+    default via: M3M4_PR
+  Layer via4
+    default via: M4M5_PR
+[INFO DRT-0162] Library cell analysis.
+[INFO DRT-0163] Instance analysis.
+[INFO DRT-0164] Number of unique instances = 82.
+[INFO DRT-0168] Init region query.
+[INFO DRT-0024]   Complete FR_MASTERSLICE.
+[INFO DRT-0024]   Complete Fr_VIA.
+[INFO DRT-0024]   Complete li1.
+[INFO DRT-0024]   Complete mcon.
+[INFO DRT-0024]   Complete met1.
+[INFO DRT-0024]   Complete via.
+[INFO DRT-0024]   Complete met2.
+[INFO DRT-0024]   Complete via2.
+[INFO DRT-0024]   Complete met3.
+[INFO DRT-0024]   Complete via3.
+[INFO DRT-0024]   Complete met4.
+[INFO DRT-0024]   Complete via4.
+[INFO DRT-0024]   Complete met5.
+[INFO DRT-0033] FR_MASTERSLICE shape region query size = 0.
+[INFO DRT-0033] FR_VIA shape region query size = 0.
+[INFO DRT-0033] li1 shape region query size = 11724.
+[INFO DRT-0033] mcon shape region query size = 7202.
+[INFO DRT-0033] met1 shape region query size = 1220.
+[INFO DRT-0033] via shape region query size = 465.
+[INFO DRT-0033] met2 shape region query size = 325.
+[INFO DRT-0033] via2 shape region query size = 372.
+[INFO DRT-0033] met3 shape region query size = 331.
+[INFO DRT-0033] via3 shape region query size = 372.
+[INFO DRT-0033] met4 shape region query size = 117.
+[INFO DRT-0033] via4 shape region query size = 18.
+[INFO DRT-0033] met5 shape region query size = 30.
+[INFO DRT-0165] Start pin access.
+[INFO DRT-0078]   Complete 626 pins.
+[INFO DRT-0081]   Complete 82 unique inst patterns.
+[INFO DRT-0084]   Complete 210 groups.
+#scanned instances     = 397
+#unique  instances     = 82
+#stdCellGenAp          = 3273
+#stdCellValidPlanarAp  = 37
+#stdCellValidViaAp     = 1983
+#stdCellPinNoAp        = 6
+#stdCellPinCnt         = 909
+#instTermValidViaApCnt = 0
+#macroGenAp            = 0
+#macroValidPlanarAp    = 0
+#macroValidViaAp       = 0
+#macroNoAp             = 0
+[INFO DRT-0166] Complete pin access.
+[INFO DRT-0267] cpu time = 00:00:22, elapsed time = 00:00:04, memory = 118.00 (MB), peak = 116.96 (MB)
+Took 5 seconds: pin_access
+global_route -congestion_report_file ./reports/sky130hd/cla32/base/congestion.rpt -congestion_iterations 30 -congestion_report_iter_step 5 -verbose
+[INFO GRT-0020] Min routing layer: met1
+[INFO GRT-0021] Max routing layer: met5
+[INFO GRT-0022] Global adjustment: 0%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0088] Layer li1     Track-Pitch = 0.4600  line-2-Via Pitch: 0.3400
+[INFO GRT-0088] Layer met1    Track-Pitch = 0.3400  line-2-Via Pitch: 0.3400
+[INFO GRT-0088] Layer met2    Track-Pitch = 0.4600  line-2-Via Pitch: 0.3500
+[INFO GRT-0088] Layer met3    Track-Pitch = 0.6800  line-2-Via Pitch: 0.6150
+[INFO GRT-0088] Layer met4    Track-Pitch = 0.9200  line-2-Via Pitch: 1.0400
+[INFO GRT-0088] Layer met5    Track-Pitch = 3.4000  line-2-Via Pitch: 3.1100
+[INFO GRT-0003] Macros: 0
+[INFO GRT-0004] Blockages: 165
+[INFO GRT-0019] Found 0 clock nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 6
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+li1        Vertical            0             0          0.00%
+met1       Horizontal       2215          1709          22.84%
+met2       Vertical         1804          1386          23.17%
+met3       Horizontal       1337          1050          21.47%
+met4       Vertical          880           660          25.00%
+met5       Horizontal        220           143          35.00%
+---------------------------------------------------------------
+
+[INFO GRT-0197] Via related to pin nodes: 1427
+[INFO GRT-0198] Via related Steiner nodes: 14
+[INFO GRT-0199] Via filling finished.
+[INFO GRT-0111] Final number of vias: 1757
+[INFO GRT-0112] Final usage 3D: 5891
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Congestion
+---------------------------------------------------------------------------------------
+li1                  0             0            0.00%             0 /  0 /  0
+met1              1709           312           18.26%             0 /  0 /  0
+met2              1386           302           21.79%             0 /  0 /  0
+met3              1050             6            0.57%             0 /  0 /  0
+met4               660             0            0.00%             0 /  0 /  0
+met5               143             0            0.00%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total             4948           620           12.53%             0 /  0 /  0
+
+[INFO GRT-0018] Total wirelength: 7824 um
+[INFO GRT-0014] Routed nets: 406
+[INFO GRT-0303] Global routing runtime = 00:00:00
+[WARNING STA-0450] virtual clock virtual_clk can not be propagated.
+estimate_parasitics
+Perform buffer insertion and gate resizing...
+repair_design -verbose
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |       406
+       10 |     +0.3% |       9 |       3 |             9 |       396
+       20 |     +2.6% |      18 |       9 |            18 |       386
+       30 |     +5.1% |      25 |      15 |            25 |       376
+       40 |     +5.1% |      25 |      15 |            25 |       366
+       50 |     +5.7% |      28 |      17 |            28 |       356
+       60 |     +5.7% |      28 |      17 |            28 |       346
+       70 |     +5.7% |      28 |      17 |            28 |       336
+       80 |     +5.6% |      29 |      17 |            29 |       326
+       90 |     +5.6% |      29 |      17 |            29 |       316
+      100 |     +5.6% |      29 |      17 |            29 |       306
+      110 |     +5.8% |      31 |      18 |            31 |       296
+      120 |     +5.8% |      31 |      18 |            31 |       286
+      130 |     +5.8% |      31 |      18 |            31 |       276
+      140 |     +6.3% |      32 |      19 |            32 |       266
+      150 |     +6.8% |      33 |      20 |            33 |       256
+      160 |     +6.8% |      33 |      20 |            33 |       246
+      170 |     +6.8% |      33 |      20 |            33 |       236
+      180 |     +6.8% |      33 |      20 |            33 |       226
+      190 |     +6.8% |      33 |      20 |            33 |       216
+      200 |     +6.8% |      33 |      20 |            33 |       206
+      210 |     +6.8% |      33 |      20 |            33 |       196
+      220 |     +6.8% |      33 |      20 |            33 |       186
+      230 |     +6.8% |      33 |      20 |            33 |       176
+      240 |     +6.8% |      33 |      20 |            33 |       166
+      250 |     +6.8% |      33 |      20 |            33 |       156
+      260 |     +6.8% |      33 |      20 |            33 |       146
+      270 |     +6.8% |      33 |      20 |            33 |       136
+      280 |     +6.8% |      33 |      20 |            33 |       126
+      290 |     +6.8% |      33 |      20 |            33 |       116
+      300 |     +6.8% |      33 |      20 |            33 |       106
+      310 |     +6.8% |      33 |      20 |            33 |        96
+      320 |     +6.8% |      33 |      20 |            33 |        86
+      330 |     +6.8% |      33 |      20 |            33 |        76
+      340 |     +6.8% |      33 |      20 |            33 |        66
+      350 |     +6.8% |      33 |      20 |            33 |        56
+      360 |     +6.8% |      33 |      20 |            33 |        46
+      370 |     +6.8% |      33 |      20 |            33 |        36
+      380 |     +6.8% |      33 |      20 |            33 |        26
+      390 |     +6.8% |      33 |      20 |            33 |        16
+      400 |     +6.8% |      33 |      20 |            33 |         6
+    final |     +6.8% |      33 |      20 |            33 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0034] Found 33 slew violations.
+[INFO RSZ-0036] Found 33 capacitance violations.
+[INFO RSZ-0039] Resized 33 instances.
+[INFO RSZ-0038] Inserted 20 buffers in 33 nets.
+[INFO RSZ-0504] Runtime: 0.15s
+global_route -start_incremental
+detailed_placement -quiet
+[INFO DPL-0009] Utilization: 68.9%
+[INFO DPL-0501] Legalized with 401 moves: displacement total 547.5 u, max 24.5 u; HPWL 4793.5 -> 5259.4 u (+9.7 %).
+[INFO DPL-0500] Runtime: 0.02s
+global_route -end_incremental -congestion_report_file ./reports/sky130hd/cla32/base/congestion_post_repair_design.rpt
+Repair setup and hold violations...
+estimate_parasitics
+repair_timing -setup_margin 0 -hold_margin 0 -repair_tns 100 -verbose
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove BufferMove CloneMove SplitLoadMove 
+[INFO RSZ-0098] No setup violations found
+[INFO RSZ-0505] Runtime: 0.05s
+[INFO RSZ-0033] No hold violations found.
+[INFO RSZ-0506] Runtime: 0.00s
+global_route -start_incremental
+detailed_placement -quiet
+[INFO DPL-0009] Utilization: 68.9%
+[INFO DPL-0501] Legalized with 0 moves: displacement total 0.0 u, max 0.0 u; HPWL 5259.4 -> 5259.4 u (+0.0 %).
+[INFO DPL-0500] Runtime: 0.00s
+check_placement -placeable -verbose
+global_route -end_incremental -congestion_report_file ./reports/sky130hd/cla32/base/congestion_post_repair_timing.rpt
+estimate_parasitics
+global_route -start_incremental
+global_route -end_incremental -congestion_report_file ./reports/sky130hd/cla32/base/congestion_post_recover_power.rpt
+Repair antennas...
+[INFO GRT-0012] Found 0 antenna violations.
+check_placement -placeable -verbose
+[INFO ANT-0002] Found 0 net violations.
+[INFO ANT-0001] Found 0 pin violations.
+Estimate parasitics...
+estimate_parasitics
+Report metrics stage 5, global route...
+No registers in design
+
+==========================================================================
+global route report_design_area
+--------------------------------------------------------------------------
+Design area 4708 um^2 69% utilization.
+[INFO FLW-0007] clock virtual_clk period 10.000000
+[INFO FLW-0008] Clock virtual_clk period 9.223
+[INFO FLW-0009] Clock virtual_clk slack 0.291
+write_sdc -no_timestamp ./results/sky130hd/cla32/base/updated_clks.sdc
+[WARNING STA-0450] virtual clock virtual_clk can not be propagated.
+[INFO FLW-0011] Path endpoint path count 33
+write_db ./results/sky130hd/cla32/base/5_1_grt.odb
+write_sdc -no_timestamp ./results/sky130hd/cla32/base/5_1_grt.sdc
+Elapsed time: 0:05.76[h:]min:sec. CPU time: user 25.87 sys 0.31 (454%). Peak memory: 260792KB.
+Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
+                                     s        s  Elapsed       MB [0:10)
+5_1_grt                .odb          5       26     4.55      254 f4ce4041a7
+5_1_grt                .sdc                                       e15519ae26

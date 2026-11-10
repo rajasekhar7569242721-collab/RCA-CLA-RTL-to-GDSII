@@ -1,0 +1,323 @@
+
+==========================================================================
+floorplan final report_tns
+--------------------------------------------------------------------------
+tns max -319.46
+
+==========================================================================
+floorplan final report_wns
+--------------------------------------------------------------------------
+wns max -16.48
+
+==========================================================================
+floorplan final report_worst_slack
+--------------------------------------------------------------------------
+worst slack max -16.48
+
+==========================================================================
+floorplan final report_clock_min_period
+--------------------------------------------------------------------------
+virtual_clk period_min = 26.48 fmax = 37.77
+
+==========================================================================
+floorplan final report_checks -path_delay min
+--------------------------------------------------------------------------
+Startpoint: a[0] (input port clocked by virtual_clk)
+Endpoint: sum[0] (output port clocked by virtual_clk)
+Path Group: virtual_clk
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock virtual_clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          1.00    1.00 ^ input external delay
+     1    0.01    0.10    0.00    1.00 ^ a[0] (in)
+                                         a[0] (net)
+                  0.10    0.00    1.00 ^ _00_/A (sky130_fd_sc_hd__fa_4)
+     1    5.00    5.45    5.36    6.36 v _00_/SUM (sky130_fd_sc_hd__fa_4)
+                                         sum[0] (net)
+                  5.45    0.00    6.36 v sum[0] (out)
+                                  6.36   data arrival time
+
+                  0.00    0.00    0.00   clock virtual_clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.00    0.00   clock reconvergence pessimism
+                         -1.00   -1.00   output external delay
+                                 -1.00   data required time
+-----------------------------------------------------------------------------
+                                 -1.00   data required time
+                                 -6.36   data arrival time
+-----------------------------------------------------------------------------
+                                  7.36   slack (MET)
+
+
+
+==========================================================================
+floorplan final report_checks -path_delay max
+--------------------------------------------------------------------------
+Startpoint: a[0] (input port clocked by virtual_clk)
+Endpoint: sum[31] (output port clocked by virtual_clk)
+Path Group: virtual_clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock virtual_clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          1.00    1.00 v input external delay
+     1    0.01    0.10    0.00    1.00 v a[0] (in)
+                                         a[0] (net)
+                  0.10    0.00    1.00 v _00_/A (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.51    1.51 v _00_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[1] (net)
+                  0.09    0.00    1.51 v _01_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    1.95 v _01_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[2] (net)
+                  0.09    0.00    1.95 v _02_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    2.40 v _02_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[3] (net)
+                  0.09    0.00    2.40 v _03_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    2.84 v _03_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[4] (net)
+                  0.09    0.00    2.84 v _04_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    3.28 v _04_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[5] (net)
+                  0.09    0.00    3.28 v _05_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    3.72 v _05_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[6] (net)
+                  0.09    0.00    3.72 v _06_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    4.16 v _06_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[7] (net)
+                  0.09    0.00    4.16 v _07_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    4.60 v _07_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[8] (net)
+                  0.09    0.00    4.60 v _08_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    5.04 v _08_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[9] (net)
+                  0.09    0.00    5.04 v _09_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    5.49 v _09_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[10] (net)
+                  0.09    0.00    5.49 v _10_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    5.93 v _10_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[11] (net)
+                  0.09    0.00    5.93 v _11_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    6.37 v _11_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[12] (net)
+                  0.09    0.00    6.37 v _12_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    6.81 v _12_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[13] (net)
+                  0.09    0.00    6.81 v _13_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    7.25 v _13_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[14] (net)
+                  0.09    0.00    7.25 v _14_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    7.69 v _14_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[15] (net)
+                  0.09    0.00    7.69 v _15_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    8.13 v _15_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[16] (net)
+                  0.09    0.00    8.13 v _16_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    8.57 v _16_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[17] (net)
+                  0.09    0.00    8.57 v _17_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    9.02 v _17_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[18] (net)
+                  0.09    0.00    9.02 v _18_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    9.46 v _18_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[19] (net)
+                  0.09    0.00    9.46 v _19_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    9.90 v _19_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[20] (net)
+                  0.09    0.00    9.90 v _20_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44   10.34 v _20_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[21] (net)
+                  0.09    0.00   10.34 v _21_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44   10.78 v _21_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[22] (net)
+                  0.09    0.00   10.78 v _22_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44   11.22 v _22_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[23] (net)
+                  0.09    0.00   11.22 v _23_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44   11.66 v _23_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[24] (net)
+                  0.09    0.00   11.66 v _24_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44   12.11 v _24_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[25] (net)
+                  0.09    0.00   12.11 v _25_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44   12.55 v _25_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[26] (net)
+                  0.09    0.00   12.55 v _26_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44   12.99 v _26_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[27] (net)
+                  0.09    0.00   12.99 v _27_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44   13.43 v _27_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[28] (net)
+                  0.09    0.00   13.43 v _28_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44   13.87 v _28_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[29] (net)
+                  0.09    0.00   13.87 v _29_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44   14.31 v _29_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[30] (net)
+                  0.09    0.00   14.31 v _30_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44   14.75 v _30_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[31] (net)
+                  0.09    0.00   14.75 v _31_/CIN (sky130_fd_sc_hd__fa_4)
+     1    5.00   14.22   10.72   25.48 ^ _31_/SUM (sky130_fd_sc_hd__fa_4)
+                                         sum[31] (net)
+                 14.22    0.00   25.48 ^ sum[31] (out)
+                                 25.48   data arrival time
+
+                  0.00   10.00   10.00   clock virtual_clk (rise edge)
+                          0.00   10.00   clock network delay (ideal)
+                          0.00   10.00   clock reconvergence pessimism
+                         -1.00    9.00   output external delay
+                                  9.00   data required time
+-----------------------------------------------------------------------------
+                                  9.00   data required time
+                                -25.48   data arrival time
+-----------------------------------------------------------------------------
+                                -16.48   slack (VIOLATED)
+
+
+
+==========================================================================
+floorplan final report_checks -unconstrained
+--------------------------------------------------------------------------
+Startpoint: a[0] (input port clocked by virtual_clk)
+Endpoint: sum[31] (output port clocked by virtual_clk)
+Path Group: virtual_clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock virtual_clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          1.00    1.00 v input external delay
+     1    0.01    0.10    0.00    1.00 v a[0] (in)
+                                         a[0] (net)
+                  0.10    0.00    1.00 v _00_/A (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.51    1.51 v _00_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[1] (net)
+                  0.09    0.00    1.51 v _01_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    1.95 v _01_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[2] (net)
+                  0.09    0.00    1.95 v _02_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    2.40 v _02_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[3] (net)
+                  0.09    0.00    2.40 v _03_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    2.84 v _03_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[4] (net)
+                  0.09    0.00    2.84 v _04_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    3.28 v _04_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[5] (net)
+                  0.09    0.00    3.28 v _05_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    3.72 v _05_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[6] (net)
+                  0.09    0.00    3.72 v _06_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    4.16 v _06_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[7] (net)
+                  0.09    0.00    4.16 v _07_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    4.60 v _07_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[8] (net)
+                  0.09    0.00    4.60 v _08_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    5.04 v _08_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[9] (net)
+                  0.09    0.00    5.04 v _09_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    5.49 v _09_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[10] (net)
+                  0.09    0.00    5.49 v _10_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    5.93 v _10_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[11] (net)
+                  0.09    0.00    5.93 v _11_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    6.37 v _11_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[12] (net)
+                  0.09    0.00    6.37 v _12_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    6.81 v _12_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[13] (net)
+                  0.09    0.00    6.81 v _13_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    7.25 v _13_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[14] (net)
+                  0.09    0.00    7.25 v _14_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    7.69 v _14_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[15] (net)
+                  0.09    0.00    7.69 v _15_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    8.13 v _15_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[16] (net)
+                  0.09    0.00    8.13 v _16_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    8.57 v _16_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[17] (net)
+                  0.09    0.00    8.57 v _17_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    9.02 v _17_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[18] (net)
+                  0.09    0.00    9.02 v _18_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    9.46 v _18_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[19] (net)
+                  0.09    0.00    9.46 v _19_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44    9.90 v _19_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[20] (net)
+                  0.09    0.00    9.90 v _20_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44   10.34 v _20_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[21] (net)
+                  0.09    0.00   10.34 v _21_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44   10.78 v _21_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[22] (net)
+                  0.09    0.00   10.78 v _22_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44   11.22 v _22_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[23] (net)
+                  0.09    0.00   11.22 v _23_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44   11.66 v _23_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[24] (net)
+                  0.09    0.00   11.66 v _24_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44   12.11 v _24_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[25] (net)
+                  0.09    0.00   12.11 v _25_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44   12.55 v _25_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[26] (net)
+                  0.09    0.00   12.55 v _26_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44   12.99 v _26_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[27] (net)
+                  0.09    0.00   12.99 v _27_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44   13.43 v _27_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[28] (net)
+                  0.09    0.00   13.43 v _28_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44   13.87 v _28_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[29] (net)
+                  0.09    0.00   13.87 v _29_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44   14.31 v _29_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[30] (net)
+                  0.09    0.00   14.31 v _30_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.09    0.44   14.75 v _30_/COUT (sky130_fd_sc_hd__fa_4)
+                                         carry[31] (net)
+                  0.09    0.00   14.75 v _31_/CIN (sky130_fd_sc_hd__fa_4)
+     1    5.00   14.22   10.72   25.48 ^ _31_/SUM (sky130_fd_sc_hd__fa_4)
+                                         sum[31] (net)
+                 14.22    0.00   25.48 ^ sum[31] (out)
+                                 25.48   data arrival time
+
+                  0.00   10.00   10.00   clock virtual_clk (rise edge)
+                          0.00   10.00   clock network delay (ideal)
+                          0.00   10.00   clock reconvergence pessimism
+                         -1.00    9.00   output external delay
+                                  9.00   data required time
+-----------------------------------------------------------------------------
+                                  9.00   data required time
+                                -25.48   data arrival time
+-----------------------------------------------------------------------------
+                                -16.48   slack (VIOLATED)
+
+
+
+==========================================================================
+floorplan final report_power
+--------------------------------------------------------------------------
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Combinational          7.37e-05   7.42e-03   2.58e-10   7.49e-03 100.0%
+Clock                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  7.37e-05   7.42e-03   2.58e-10   7.49e-03 100.0%
+                           1.0%      99.0%       0.0%

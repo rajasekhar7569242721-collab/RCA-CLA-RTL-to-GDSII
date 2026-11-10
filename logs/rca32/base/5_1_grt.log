@@ -1,0 +1,303 @@
+OpenROAD 26Q4-1798-g6932b6296c 
+Features included (+) or not (-): -GPU +GUI
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 12 thread(s).
+read_liberty ./objects/binary_libs/sky130hd/sky130_fd_sc_hd__tt_025C_1v80@12800135-1794239217-af506811.blib
+read_db ./results/sky130hd/rca32/base/4_cts.odb
+read_sdc ./results/sky130hd/rca32/base/4_cts.sdc
+source /home/rajasrajas/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+pin_access
+[INFO DRT-0149] Reading tech and libs.
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer mcon
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer mcon
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via2
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via2
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via3
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via3
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via4
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via4
+
+Units:                1000
+Number of layers:     13
+Number of macros:     441
+Number of vias:       29
+Number of viarulegen: 25
+
+[INFO DRT-0150] Reading design.
+
+Design:                   rca32
+Die area:                 ( 0 0 ) ( 58595 58595 )
+Number of track patterns: 12
+Number of DEF vias:       0
+Number of components:     182
+Number of terminals:      100
+Number of snets:          2
+Number of nets:           235
+
+[INFO DRT-0167] List of default vias:
+  Layer via
+    default via: M1M2_PR
+  Layer via2
+    default via: M2M3_PR
+  Layer via3
+    default via: M3M4_PR
+  Layer via4
+    default via: M4M5_PR
+[INFO DRT-0162] Library cell analysis.
+[INFO DRT-0163] Instance analysis.
+[INFO DRT-0164] Number of unique instances = 10.
+[INFO DRT-0168] Init region query.
+[INFO DRT-0024]   Complete FR_MASTERSLICE.
+[INFO DRT-0024]   Complete Fr_VIA.
+[INFO DRT-0024]   Complete li1.
+[INFO DRT-0024]   Complete mcon.
+[INFO DRT-0024]   Complete met1.
+[INFO DRT-0024]   Complete via.
+[INFO DRT-0024]   Complete met2.
+[INFO DRT-0024]   Complete via2.
+[INFO DRT-0024]   Complete met3.
+[INFO DRT-0024]   Complete via3.
+[INFO DRT-0024]   Complete met4.
+[INFO DRT-0024]   Complete via4.
+[INFO DRT-0024]   Complete met5.
+[INFO DRT-0033] FR_MASTERSLICE shape region query size = 0.
+[INFO DRT-0033] FR_VIA shape region query size = 0.
+[INFO DRT-0033] li1 shape region query size = 6475.
+[INFO DRT-0033] mcon shape region query size = 3818.
+[INFO DRT-0033] met1 shape region query size = 1035.
+[INFO DRT-0033] via shape region query size = 210.
+[INFO DRT-0033] met2 shape region query size = 148.
+[INFO DRT-0033] via2 shape region query size = 168.
+[INFO DRT-0033] met3 shape region query size = 202.
+[INFO DRT-0033] via3 shape region query size = 168.
+[INFO DRT-0033] met4 shape region query size = 54.
+[INFO DRT-0033] via4 shape region query size = 8.
+[INFO DRT-0033] met5 shape region query size = 16.
+[INFO DRT-0165] Start pin access.
+[INFO DRT-0078]   Complete 58 pins.
+[INFO DRT-0081]   Complete 10 unique inst patterns.
+[INFO DRT-0084]   Complete 83 groups.
+#scanned instances     = 182
+#unique  instances     = 10
+#stdCellGenAp          = 904
+#stdCellValidPlanarAp  = 26
+#stdCellValidViaAp     = 194
+#stdCellPinNoAp        = 6
+#stdCellPinCnt         = 372
+#instTermValidViaApCnt = 0
+#macroGenAp            = 0
+#macroValidPlanarAp    = 0
+#macroValidViaAp       = 0
+#macroNoAp             = 0
+[INFO DRT-0166] Complete pin access.
+[INFO DRT-0267] cpu time = 00:00:07, elapsed time = 00:00:03, memory = 115.88 (MB), peak = 115.09 (MB)
+global_route -congestion_report_file ./reports/sky130hd/rca32/base/congestion.rpt -congestion_iterations 30 -congestion_report_iter_step 5 -verbose
+[INFO GRT-0020] Min routing layer: met1
+[INFO GRT-0021] Max routing layer: met5
+[INFO GRT-0022] Global adjustment: 0%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0088] Layer li1     Track-Pitch = 0.4600  line-2-Via Pitch: 0.3400
+[INFO GRT-0088] Layer met1    Track-Pitch = 0.3400  line-2-Via Pitch: 0.3400
+[INFO GRT-0088] Layer met2    Track-Pitch = 0.4600  line-2-Via Pitch: 0.3500
+[INFO GRT-0088] Layer met3    Track-Pitch = 0.6800  line-2-Via Pitch: 0.6150
+[INFO GRT-0088] Layer met4    Track-Pitch = 0.9200  line-2-Via Pitch: 1.0400
+[INFO GRT-0088] Layer met5    Track-Pitch = 3.4000  line-2-Via Pitch: 3.1100
+[INFO GRT-0003] Macros: 0
+[INFO GRT-0004] Blockages: 160
+[INFO GRT-0019] Found 0 clock nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+li1        Vertical            0             0          0.00%
+met1       Horizontal        903           701          22.37%
+met2       Vertical          791           609          23.01%
+met3       Horizontal        578           455          21.28%
+met4       Vertical          392           294          25.00%
+met5       Horizontal         98            63          35.71%
+---------------------------------------------------------------
+
+[INFO GRT-0197] Via related to pin nodes: 640
+[INFO GRT-0198] Via related Steiner nodes: 0
+[INFO GRT-0199] Via filling finished.
+[INFO GRT-0111] Final number of vias: 819
+[INFO GRT-0112] Final usage 3D: 2783
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Congestion
+---------------------------------------------------------------------------------------
+li1                  0             0            0.00%             0 /  0 /  0
+met1               701           147           20.97%             0 /  0 /  0
+met2               609           159           26.11%             0 /  0 /  0
+met3               455            17            3.74%             0 /  0 /  0
+met4               294             3            1.02%             0 /  0 /  0
+met5                63             0            0.00%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total             2122           326           15.36%             0 /  0 /  0
+
+[INFO GRT-0018] Total wirelength: 3884 um
+[INFO GRT-0014] Routed nets: 235
+[INFO GRT-0303] Global routing runtime = 00:00:00
+[WARNING STA-0450] virtual clock virtual_clk can not be propagated.
+estimate_parasitics
+Perform buffer insertion and gate resizing...
+repair_design -verbose
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |       235
+       10 |     +5.6% |       2 |       5 |             5 |       225
+       20 |     +8.6% |       4 |       8 |             8 |       215
+       30 |    +12.0% |       5 |      11 |            11 |       205
+       40 |    +15.4% |       6 |      14 |            15 |       195
+       50 |    +17.2% |       8 |      16 |            18 |       185
+       60 |    +19.0% |      10 |      18 |            21 |       175
+       70 |    +18.6% |      13 |      19 |            25 |       165
+       80 |    +21.6% |      15 |      22 |            28 |       155
+       90 |    +22.9% |      18 |      24 |            31 |       145
+      100 |    +24.7% |      20 |      26 |            33 |       135
+      110 |    +24.7% |      20 |      26 |            33 |       125
+      120 |    +24.7% |      20 |      26 |            33 |       115
+      130 |    +24.7% |      20 |      26 |            33 |       105
+      140 |    +24.7% |      20 |      26 |            33 |        95
+      150 |    +24.7% |      20 |      26 |            33 |        85
+      160 |    +24.7% |      20 |      26 |            33 |        75
+      170 |    +24.7% |      20 |      26 |            33 |        65
+      180 |    +24.7% |      20 |      26 |            33 |        55
+      190 |    +24.7% |      20 |      26 |            33 |        45
+      200 |    +24.7% |      20 |      26 |            33 |        35
+      210 |    +24.7% |      20 |      26 |            33 |        25
+      220 |    +24.7% |      20 |      26 |            33 |        15
+      230 |    +24.7% |      20 |      26 |            33 |         5
+    final |    +24.7% |      20 |      26 |            33 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0034] Found 31 slew violations.
+[INFO RSZ-0036] Found 33 capacitance violations.
+[INFO RSZ-0039] Resized 20 instances.
+[INFO RSZ-0038] Inserted 26 buffers in 33 nets.
+[INFO RSZ-0504] Runtime: 0.21s
+global_route -start_incremental
+detailed_placement -quiet
+[INFO DPL-0009] Utilization: 90.2%
+[INFO DPL-0501] Legalized with 630 moves: displacement total 988.2 u, max 22.9 u; HPWL 2897.0 -> 3906.1 u (+34.8 %).
+[INFO DPL-0500] Runtime: 0.06s
+global_route -end_incremental -congestion_report_file ./reports/sky130hd/rca32/base/congestion_post_repair_design.rpt
+Repair setup and hold violations...
+estimate_parasitics
+repair_timing -setup_margin 0 -hold_margin 0 -repair_tns 100 -verbose
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove BufferMove CloneMove SplitLoadMove 
+[INFO RSZ-0094] Found 26 endpoints with setup violations.
+[INFO RSZ-0099] Repairing 26 out of 26 (100.00%) violating endpoints...
+   Iter   | Removed | Resized | Inserted | Cloned |  Pin  |   Area   |    WNS   |    TNS     |  Viol  |  Worst
+          | Buffers |  Gates  | Buffers  |  Gates | Swaps |          |          |            | Endpts | Endpoint
+------------------------------------------------------------------------------------------------------------------------------
+       0* |       0 |       0 |        0 |      0 |     0 |    +0.0% |  -10.730 |     -145.8 |     26 | sum[31]
+       5* |       1 |       2 |        0 |      0 |     0 |    -0.7% |  -10.613 |     -145.1 |     26 | sum[31]
+       7* |       2 |       2 |        0 |      0 |     0 |    -1.7% |  -10.613 |     -145.0 |     26 | sum[31]
+       9* |       3 |       2 |        0 |      0 |     0 |    -2.5% |  -10.613 |     -144.9 |     26 | sum[31]
+      10* |       3 |       2 |        0 |      0 |     0 |    -2.5% |  -10.613 |     -144.9 |     26 | sum[31]
+      11* |       4 |       2 |        0 |      0 |     0 |    -3.5% |  -10.613 |     -144.8 |     26 | sum[31]
+      13* |       5 |       2 |        0 |      0 |     0 |    -4.2% |  -10.613 |     -144.8 |     26 | sum[31]
+      15* |       6 |       2 |        0 |      0 |     0 |    -4.9% |  -10.613 |     -144.7 |     26 | sum[31]
+      17* |       7 |       2 |        0 |      0 |     0 |    -5.6% |  -10.613 |     -144.6 |     26 | sum[31]
+      19* |       8 |       2 |        0 |      0 |     0 |    -6.6% |  -10.613 |     -144.5 |     26 | sum[31]
+      20* |       8 |       2 |        0 |      0 |     0 |    -6.6% |  -10.613 |     -144.5 |     26 | sum[31]
+      21* |       9 |       2 |        0 |      0 |     0 |    -7.4% |  -10.613 |     -144.4 |     26 | sum[31]
+      23* |      10 |       2 |        0 |      0 |     0 |    -8.4% |  -10.613 |     -144.3 |     26 | sum[31]
+      25* |      11 |       2 |        0 |      0 |     0 |    -9.4% |  -10.613 |     -144.2 |     26 | sum[31]
+      27* |      12 |       2 |        0 |      0 |     0 |   -10.4% |  -10.613 |     -144.2 |     26 | sum[31]
+      29* |      13 |       2 |        0 |      0 |     0 |   -11.4% |  -10.613 |     -144.1 |     26 | sum[31]
+      30* |      13 |       2 |        0 |      0 |     0 |   -11.4% |  -10.613 |     -144.1 |     26 | sum[31]
+      31* |      14 |       2 |        0 |      0 |     0 |   -12.4% |  -10.613 |     -144.0 |     26 | sum[31]
+      32* |      14 |       2 |        0 |      0 |     0 |   -12.4% |  -10.613 |     -144.0 |     26 | sum[31]
+      34* |      15 |       2 |        0 |      0 |     0 |   -13.1% |  -10.613 |     -143.9 |     26 | sum[31]
+      36* |      16 |       2 |        0 |      0 |     0 |   -14.1% |  -10.613 |     -143.8 |     26 | sum[31]
+      37* |      16 |       2 |        0 |      0 |     0 |   -14.1% |  -10.613 |     -143.8 |     26 | sum[31]
+      39* |      16 |       3 |        0 |      0 |     0 |   -13.9% |  -10.613 |     -142.3 |     26 | sum[31]
+      40* |      16 |       3 |        0 |      0 |     0 |   -13.9% |  -10.613 |     -142.3 |     26 | sum[31]
+      41* |      17 |       3 |        0 |      0 |     0 |   -14.9% |  -10.613 |     -142.2 |     26 | sum[31]
+      42* |      17 |       3 |        0 |      0 |     0 |   -14.9% |  -10.613 |     -142.2 |     26 | sum[31]
+      44* |      17 |       4 |        0 |      0 |     0 |   -14.7% |  -10.613 |     -140.6 |     26 | sum[31]
+      46* |      18 |       4 |        0 |      0 |     0 |   -15.4% |  -10.613 |     -140.5 |     26 | sum[31]
+      47* |      18 |       4 |        0 |      0 |     0 |   -15.4% |  -10.613 |     -140.5 |     26 | sum[31]
+      49* |      19 |       4 |        0 |      0 |     0 |   -16.4% |  -10.613 |     -140.4 |     26 | sum[31]
+      50* |      19 |       4 |        0 |      0 |     0 |   -16.4% |  -10.613 |     -140.4 |     26 | sum[31]
+      51* |      20 |       4 |        0 |      0 |     0 |   -17.0% |  -10.613 |     -140.4 |     26 | sum[31]
+      51* |      20 |       4 |        0 |      0 |     0 |   -17.0% |  -10.613 |     -140.4 |     26 | sum[31]
+      52+ |      20 |       4 |        0 |      0 |     0 |   -17.0% |  -10.613 |     -140.4 |     25 | sum[31]
+      53+ |      20 |       4 |        0 |      0 |     0 |   -17.0% |  -10.613 |     -140.4 |     25 | sum[31]
+      54+ |      20 |       4 |        0 |      0 |     0 |   -17.0% |  -10.613 |     -140.4 |     25 | sum[31]
+      55+ |      20 |       4 |        0 |      0 |     0 |   -17.0% |  -10.613 |     -140.4 |     25 | sum[31]
+      56+ |      20 |       4 |        0 |      0 |     0 |   -17.0% |  -10.613 |     -140.4 |     25 | sum[31]
+      57+ |      20 |       4 |        0 |      0 |     0 |   -17.0% |  -10.613 |     -140.4 |     25 | sum[31]
+      58+ |      20 |       4 |        0 |      0 |     0 |   -17.0% |  -10.613 |     -140.4 |     25 | sum[31]
+      59+ |      20 |       4 |        0 |      0 |     0 |   -17.0% |  -10.613 |     -140.4 |     25 | sum[31]
+      60+ |      20 |       4 |        0 |      0 |     0 |   -17.0% |  -10.613 |     -140.4 |     25 | sum[31]
+      60+ |      20 |       4 |        0 |      0 |     0 |   -17.0% |  -10.613 |     -140.4 |     25 | sum[31]
+      61+ |      20 |       4 |        0 |      0 |     0 |   -17.0% |  -10.613 |     -140.4 |     25 | sum[31]
+      62+ |      20 |       4 |        0 |      0 |     0 |   -17.0% |  -10.613 |     -140.4 |     25 | sum[31]
+      63+ |      20 |       4 |        0 |      0 |     0 |   -17.0% |  -10.613 |     -140.4 |     25 | sum[31]
+      64+ |      20 |       4 |        0 |      0 |     0 |   -17.0% |  -10.613 |     -140.4 |     25 | sum[31]
+      65+ |      20 |       4 |        0 |      0 |     0 |   -17.0% |  -10.613 |     -140.4 |     25 | sum[31]
+      66+ |      20 |       4 |        0 |      0 |     0 |   -17.0% |  -10.613 |     -140.4 |     25 | sum[31]
+      67+ |      20 |       4 |        0 |      0 |     0 |   -17.0% |  -10.613 |     -140.4 |     25 | sum[31]
+      68+ |      20 |       4 |        0 |      0 |     0 |   -17.0% |  -10.613 |     -140.4 |     25 | sum[31]
+      69+ |      20 |       4 |        0 |      0 |     0 |   -17.0% |  -10.613 |     -140.4 |     25 | sum[31]
+      70+ |      20 |       4 |        0 |      0 |     0 |   -17.0% |  -10.613 |     -140.4 |     25 | sum[31]
+      70+ |      20 |       4 |        0 |      0 |     0 |   -17.0% |  -10.613 |     -140.4 |     25 | sum[31]
+      71+ |      20 |       4 |        0 |      0 |     0 |   -17.0% |  -10.613 |     -140.4 |     25 | sum[31]
+      72+ |      20 |       4 |        0 |      0 |     0 |   -17.0% |  -10.613 |     -140.4 |     25 | sum[31]
+      73+ |      20 |       4 |        0 |      0 |     0 |   -17.0% |  -10.613 |     -140.4 |     25 | sum[31]
+      74+ |      20 |       4 |        0 |      0 |     0 |   -17.0% |  -10.613 |     -140.4 |     25 | sum[31]
+      75+ |      20 |       4 |        0 |      0 |     0 |   -17.0% |  -10.613 |     -140.4 |     25 | sum[31]
+      76+ |      20 |       4 |        0 |      0 |     0 |   -17.0% |  -10.613 |     -140.4 |     25 | sum[31]
+    final |      20 |       4 |        0 |      0 |     0 |   -17.0% |  -10.613 |     -140.4 |     25 | sum[31]
+------------------------------------------------------------------------------------------------------------------------------
+[INFO RSZ-0059] Removed 20 buffers.
+[INFO RSZ-0051] Resized 4 instances: 4 up, 0 up match, 0 down, 0 VT
+[WARNING RSZ-0062] Unable to repair all setup violations.
+[INFO RSZ-0505] Runtime: 0.14s
+[INFO RSZ-0033] No hold violations found.
+[INFO RSZ-0506] Runtime: 0.00s
+global_route -start_incremental
+detailed_placement -quiet
+[INFO DPL-0009] Utilization: 74.9%
+[INFO DPL-0501] Legalized with 72 moves: displacement total 51.9 u, max 14.2 u; HPWL 3449.0 -> 3478.7 u (+0.9 %).
+[INFO DPL-0500] Runtime: 0.00s
+check_placement -placeable -verbose
+global_route -end_incremental -congestion_report_file ./reports/sky130hd/rca32/base/congestion_post_repair_timing.rpt
+estimate_parasitics
+global_route -start_incremental
+global_route -end_incremental -congestion_report_file ./reports/sky130hd/rca32/base/congestion_post_recover_power.rpt
+Repair antennas...
+[INFO GRT-0012] Found 0 antenna violations.
+check_placement -placeable -verbose
+[INFO ANT-0002] Found 0 net violations.
+[INFO ANT-0001] Found 0 pin violations.
+Estimate parasitics...
+estimate_parasitics
+Report metrics stage 5, global route...
+No registers in design
+
+==========================================================================
+global route report_design_area
+--------------------------------------------------------------------------
+Design area 2286 um^2 75% utilization.
+[INFO FLW-0007] clock virtual_clk period 10.000000
+[INFO FLW-0008] Clock virtual_clk period 19.582
+[INFO FLW-0009] Clock virtual_clk slack -10.612
+write_sdc -no_timestamp ./results/sky130hd/rca32/base/updated_clks.sdc
+[WARNING STA-0450] virtual clock virtual_clk can not be propagated.
+[INFO FLW-0011] Path endpoint path count 33
+write_db ./results/sky130hd/rca32/base/5_1_grt.odb
+write_sdc -no_timestamp ./results/sky130hd/rca32/base/5_1_grt.sdc
+Elapsed time: 0:04.47[h:]min:sec. CPU time: user 10.33 sys 0.28 (237%). Peak memory: 262756KB.
+Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
+                                     s        s  Elapsed       MB [0:10)
+5_1_grt                .odb          4       11     2.37      256 22c324be4d
+5_1_grt                .sdc                                       e58411eb97

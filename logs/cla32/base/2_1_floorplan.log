@@ -1,0 +1,151 @@
+OpenROAD 26Q4-1798-g6932b6296c 
+Features included (+) or not (-): -GPU +GUI
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 12 thread(s).
+read_liberty ./objects/binary_libs/sky130hd/sky130_fd_sc_hd__tt_025C_1v80@12800135-1794239217-af506811.blib
+read_db ./results/sky130hd/cla32/base/1_synth.odb
+read_sdc ./results/sky130hd/cla32/base/1_synth.sdc
+source /home/rajasrajas/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+source /home/rajasrajas/OpenROAD-flow-scripts/flow/platforms/sky130hd/global_connect.tcl
+global_connect
+Master sky130_ef_sc_hd__decap_12 is loaded but not used in the design
+
+==========================================================================
+Floorplan check_setup
+--------------------------------------------------------------------------
+number instances in verilog is 170
+initialize_floorplan -utilization 20 -aspect_ratio 1.0 -core_space 1.0 -site unithd
+[INFO IFP-0107] Defining die area using utilization: 20.00% and aspect ratio: 1.
+[WARNING IFP-0028] Core area lower left (1.000, 1.000) snapped to (1.380, 2.720).
+[INFO IFP-0001] Added 30 rows of 182 site unithd.
+[INFO IFP-0100] Die BBox:  (  0.000  0.000 ) ( 86.485 86.485 ) um
+[INFO IFP-0101] Core BBox: (  1.380  2.720 ) ( 85.100 84.320 ) um
+[INFO IFP-0102] Core area:                         6831.552 um^2
+[INFO IFP-0103] Total instances area:              1427.619 um^2
+[INFO IFP-0104] Effective utilization:                0.209
+[INFO IFP-0105] Number of instances:                    170
+source /home/rajasrajas/OpenROAD-flow-scripts/flow/platforms/sky130hd/make_tracks.tcl
+source /home/rajasrajas/OpenROAD-flow-scripts/flow/platforms/sky130hd/fastroute.tcl
+set_dont_use "sky130_fd_sc_hd__probe_p_8 sky130_fd_sc_hd__probec_p_8 sky130_fd_sc_hd__lpflow_bleeder_1 sky130_fd_sc_hd__lpflow_clkbufkapwr_1 sky130_fd_sc_hd__lpflow_clkbufkapwr_16 sky130_fd_sc_hd__lpflow_clkbufkapwr_2 sky130_fd_sc_hd__lpflow_clkbufkapwr_4 sky130_fd_sc_hd__lpflow_clkbufkapwr_8 sky130_fd_sc_hd__lpflow_clkinvkapwr_1 sky130_fd_sc_hd__lpflow_clkinvkapwr_16 sky130_fd_sc_hd__lpflow_clkinvkapwr_2 sky130_fd_sc_hd__lpflow_clkinvkapwr_4 sky130_fd_sc_hd__lpflow_clkinvkapwr_8 sky130_fd_sc_hd__lpflow_decapkapwr_12 sky130_fd_sc_hd__lpflow_decapkapwr_3 sky130_fd_sc_hd__lpflow_decapkapwr_4 sky130_fd_sc_hd__lpflow_decapkapwr_6 sky130_fd_sc_hd__lpflow_decapkapwr_8 sky130_fd_sc_hd__lpflow_inputiso0n_1 sky130_fd_sc_hd__lpflow_inputiso0p_1 sky130_fd_sc_hd__lpflow_inputiso1n_1 sky130_fd_sc_hd__lpflow_inputiso1p_1 sky130_fd_sc_hd__lpflow_inputisolatch_1 sky130_fd_sc_hd__lpflow_isobufsrc_1 sky130_fd_sc_hd__lpflow_isobufsrc_16 sky130_fd_sc_hd__lpflow_isobufsrc_2 sky130_fd_sc_hd__lpflow_isobufsrc_4 sky130_fd_sc_hd__lpflow_isobufsrc_8 sky130_fd_sc_hd__lpflow_isobufsrckapwr_16 sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_1 sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_2 sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_4 sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_4 sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_1 sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_2 sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_4"
+repair_tie_fanout -separation 0 sky130_fd_sc_hd__tt_025C_1v80/sky130_fd_sc_hd__conb_1/LO
+repair_tie_fanout -separation 0 sky130_fd_sc_hd__tt_025C_1v80/sky130_fd_sc_hd__conb_1/HI
+repair_timing -setup_margin 0 -hold_margin 0 -repair_tns 100 -match_cell_footprint -setup -skip_last_gasp -sequence unbuffer,sizeup,swap,vt_swap -verbose
+[WARNING EST-0027] no estimated parasitics. Using wire load models.
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove 
+[INFO RSZ-0094] Found 33 endpoints with setup violations.
+[INFO RSZ-0099] Repairing 33 out of 33 (100.00%) violating endpoints...
+   Iter   | Removed | Resized | Inserted | Cloned |  Pin  |   Area   |    WNS   |    TNS     |  Viol  |  Worst
+          | Buffers |  Gates  | Buffers  |  Gates | Swaps |          |          |            | Endpts | Endpoint
+------------------------------------------------------------------------------------------------------------------------------
+       0* |       0 |       0 |        0 |      0 |     0 |    +0.0% |  -67.607 |    -1794.3 |     33 | sum[26]
+      10* |       0 |       9 |        0 |      0 |     0 |    +4.7% |  -66.627 |    -1499.7 |     33 | sum[2]
+      20* |       0 |      19 |        0 |      0 |     0 |   +17.1% |  -60.760 |    -1076.9 |     33 | sum[9]
+      30* |       0 |      29 |        0 |      0 |     0 |   +27.6% |  -34.641 |     -750.0 |     33 | sum[18]
+      40* |       0 |      39 |        0 |      0 |     0 |   +34.4% |  -26.835 |     -553.6 |     33 | sum[12]
+      50* |       0 |      43 |        0 |      0 |     6 |   +36.5% |  -17.567 |     -459.7 |     33 | sum[7]
+      60* |       0 |      52 |        0 |      0 |     7 |   +43.7% |  -17.414 |     -458.0 |     33 | sum[25]
+      70* |       0 |      62 |        0 |      0 |     7 |   +52.5% |  -17.315 |     -455.8 |     33 | sum[26]
+      80* |       0 |      68 |        0 |      0 |    11 |   +54.5% |  -17.286 |     -455.3 |     33 | sum[25]
+      86* |       0 |      68 |        0 |      0 |    12 |   +54.5% |  -17.282 |     -455.3 |     33 | sum[26]
+      90* |       0 |      70 |        0 |      0 |    13 |   +56.3% |  -17.282 |     -455.1 |     33 | sum[26]
+     100* |       0 |      75 |        0 |      0 |    18 |   +59.1% |  -17.282 |     -454.9 |     33 | sum[26]
+     106* |       0 |      75 |        0 |      0 |    15 |   +59.1% |  -17.282 |     -454.9 |     33 | sum[26]
+     110* |       0 |      77 |        0 |      0 |    16 |   +60.1% |  -17.282 |     -454.7 |     33 | sum[26]
+     120* |       0 |      82 |        0 |      0 |    21 |   +61.7% |  -17.298 |     -454.8 |     33 | sum[26]
+     124* |       0 |      77 |        0 |      0 |    16 |   +60.1% |  -17.282 |     -454.7 |     33 | sum[26]
+     130* |       0 |      81 |        0 |      0 |    17 |   +62.0% |  -17.329 |     -454.8 |     33 | sum[26]
+     136* |       0 |      77 |        0 |      0 |    17 |   +60.1% |  -17.282 |     -454.7 |     33 | sum[26]
+     140* |       0 |      79 |        0 |      0 |    18 |   +60.6% |  -17.282 |     -454.7 |     33 | sum[26]
+     141* |       0 |      80 |        0 |      0 |    18 |   +61.0% |  -17.282 |     -454.7 |     33 | sum[26]
+     150* |       0 |      86 |        0 |      0 |    20 |   +62.9% |  -17.297 |     -454.6 |     33 | sum[26]
+     150* |       0 |      80 |        0 |      0 |    19 |   +61.0% |  -17.282 |     -454.7 |     33 | sum[26]
+     156* |       0 |      82 |        0 |      0 |    20 |   +61.3% |  -17.282 |     -454.7 |     33 | sum[26]
+     160* |       0 |      84 |        0 |      0 |    21 |   +61.5% |  -17.282 |     -454.5 |     33 | sum[26]
+     170* |       0 |      88 |        0 |      0 |    27 |   +62.1% |  -17.282 |     -454.2 |     33 | sum[26]
+     180* |       0 |      95 |        0 |      0 |    30 |   +64.7% |  -17.299 |     -454.2 |     33 | sum[5]
+     182* |       0 |      92 |        0 |      0 |    29 |   +63.2% |  -17.282 |     -454.0 |     33 | sum[26]
+     190* |       0 |      97 |        0 |      0 |    31 |   +65.0% |  -17.291 |     -454.1 |     33 | sum[15]
+     196* |       0 |      93 |        0 |      0 |    30 |   +63.5% |  -17.282 |     -453.9 |     33 | sum[26]
+     200* |       0 |      95 |        0 |      0 |    31 |   +64.6% |  -17.282 |     -453.2 |     33 | sum[26]
+     204* |       0 |      97 |        0 |      0 |    33 |   +65.6% |  -17.282 |     -453.3 |     33 | sum[26]
+     205* |       0 |      97 |        0 |      0 |    33 |   +65.6% |  -17.282 |     -453.3 |     33 | sum[26]
+     209* |       0 |      99 |        0 |      0 |    34 |   +66.3% |  -17.282 |     -453.2 |     33 | sum[26]
+     210* |       0 |      99 |        0 |      0 |    34 |   +66.3% |  -17.282 |     -453.2 |     33 | sum[26]
+     215* |       0 |     101 |        0 |      0 |    34 |   +67.0% |  -17.282 |     -453.2 |     33 | sum[26]
+     219* |       0 |     104 |        0 |      0 |    34 |   +67.7% |  -17.282 |     -453.2 |     33 | sum[26]
+     220* |       0 |     104 |        0 |      0 |    34 |   +67.7% |  -17.282 |     -453.2 |     33 | sum[26]
+     225* |       0 |     109 |        0 |      0 |    34 |   +69.4% |  -17.282 |     -453.1 |     33 | sum[26]
+     227* |       0 |     109 |        0 |      0 |    34 |   +69.4% |  -17.282 |     -453.1 |     33 | sum[26]
+     230* |       0 |     110 |        0 |      0 |    35 |   +69.6% |  -17.282 |     -452.9 |     33 | sum[26]
+     240* |       0 |     114 |        0 |      0 |    41 |   +72.0% |  -17.282 |     -453.1 |     33 | sum[26]
+     242* |       0 |     114 |        0 |      0 |    41 |   +72.0% |  -17.282 |     -453.1 |     33 | sum[26]
+     243* |       0 |     114 |        0 |      0 |    41 |   +72.0% |  -17.282 |     -453.1 |     33 | sum[26]
+     245* |       0 |     114 |        0 |      0 |    42 |   +72.0% |  -17.282 |     -452.7 |     33 | sum[26]
+     250* |       0 |     117 |        0 |      0 |    43 |   +73.4% |  -17.282 |     -452.8 |     33 | sum[26]
+     254* |       0 |     120 |        0 |      0 |    44 |   +74.9% |  -17.282 |     -452.7 |     33 | sum[26]
+     256* |       0 |     120 |        0 |      0 |    45 |   +74.9% |  -17.282 |     -452.2 |     33 | sum[26]
+     260* |       0 |     121 |        0 |      0 |    47 |   +75.5% |  -17.282 |     -452.0 |     33 | sum[26]
+     262* |       0 |     121 |        0 |      0 |    47 |   +75.5% |  -17.282 |     -452.0 |     33 | sum[26]
+     264* |       0 |     121 |        0 |      0 |    48 |   +75.5% |  -17.282 |     -451.9 |     33 | sum[26]
+     266* |       0 |     121 |        0 |      0 |    49 |   +75.5% |  -17.282 |     -451.7 |     33 | sum[26]
+     269* |       0 |     121 |        0 |      0 |    50 |   +75.5% |  -17.282 |     -451.6 |     33 | sum[26]
+     270* |       0 |     121 |        0 |      0 |    50 |   +75.5% |  -17.282 |     -451.6 |     33 | sum[26]
+     274* |       0 |     122 |        0 |      0 |    51 |   +75.8% |  -17.281 |     -451.6 |     33 | sum[25]
+     277* |       0 |     124 |        0 |      0 |    51 |   +77.1% |  -17.281 |     -451.7 |     33 | sum[25]
+     279* |       0 |     125 |        0 |      0 |    51 |   +77.6% |  -17.281 |     -451.7 |     33 | sum[25]
+     280* |       0 |     125 |        0 |      0 |    51 |   +77.6% |  -17.281 |     -451.7 |     33 | sum[25]
+     284* |       0 |     125 |        0 |      0 |    51 |   +77.6% |  -17.281 |     -451.7 |     33 | sum[25]
+     287* |       0 |     126 |        0 |      0 |    51 |   +78.1% |  -17.281 |     -451.6 |     33 | sum[25]
+     289* |       0 |     126 |        0 |      0 |    51 |   +78.1% |  -17.281 |     -451.6 |     33 | sum[25]
+     290* |       0 |     126 |        0 |      0 |    51 |   +78.1% |  -17.281 |     -451.6 |     33 | sum[25]
+     290* |       0 |     126 |        0 |      0 |    51 |   +78.1% |  -17.281 |     -451.6 |     33 | sum[25]
+     292* |       0 |     126 |        0 |      0 |    51 |   +78.1% |  -17.281 |     -451.6 |     33 | sum[25]
+     292* |       0 |     126 |        0 |      0 |    51 |   +78.1% |  -17.281 |     -451.6 |     33 | sum[25]
+    final |       0 |     126 |        0 |      0 |    51 |   +78.1% |  -17.281 |     -451.6 |     33 | sum[25]
+------------------------------------------------------------------------------------------------------------------------------
+[INFO RSZ-0051] Resized 126 instances: 126 up, 0 up match, 0 down, 0 VT
+[INFO RSZ-0043] Swapped pins on 51 instances.
+[WARNING RSZ-0062] Unable to repair all setup violations.
+[INFO RSZ-0505] Runtime: 0.57s
+Default units for flow
+ time 1ns
+ capacitance 1pF
+ resistance 1kohm
+ voltage 1v
+ current 1mA
+ power 1nW
+ distance 1um
+   Layer   | Unit Resistance | Unit Capacitance 
+           |       (kohm/um) |          (pF/um)
+------------------------------------------------
+       li1 |        7.18e-02 |         1.50e-04
+      met1 |        1.21e-03 |         1.72e-04
+      met2 |        1.22e-03 |         1.36e-04
+      met3 |        1.66e-04 |         2.15e-04
+      met4 |        1.68e-04 |         1.48e-04
+      met5 |        1.84e-05 |         1.54e-04
+------------------------------------------------
+
+   Layer   | Via Resistance 
+           |         (kohm) 
+----------------------------
+      mcon |       9.25e-03 
+       via |       4.50e-03 
+      via2 |       3.37e-03 
+      via3 |       3.77e-04 
+      via4 |       5.80e-06 
+----------------------------
+Report metrics stage 2, floorplan final...
+
+==========================================================================
+floorplan final report_design_area
+--------------------------------------------------------------------------
+Design area 2542 um^2 37% utilization.
+write_db ./results/sky130hd/cla32/base/2_1_floorplan.odb
+write_sdc -no_timestamp ./results/sky130hd/cla32/base/2_1_floorplan.sdc
+Elapsed time: 0:00.97[h:]min:sec. CPU time: user 0.75 sys 0.29 (107%). Peak memory: 142140KB.
+Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
+                                     s        s  Elapsed       MB [0:10)
+2_1_floorplan          .odb          0        1     1.07      138 a4388d72a3
+2_1_floorplan          .sdc                                       e15519ae26

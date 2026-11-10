@@ -1,0 +1,386 @@
+
+==========================================================================
+global route report_tns
+--------------------------------------------------------------------------
+tns max 0.00
+
+==========================================================================
+global route report_wns
+--------------------------------------------------------------------------
+wns max 0.00
+
+==========================================================================
+global route report_worst_slack
+--------------------------------------------------------------------------
+worst slack max 0.29
+
+==========================================================================
+global route report_clock_min_period
+--------------------------------------------------------------------------
+virtual_clk period_min = 9.71 fmax = 103.00
+
+==========================================================================
+global route report_clock_skew
+--------------------------------------------------------------------------
+Clock virtual_clk
+No launch/capture paths found.
+
+
+==========================================================================
+global route report_checks -path_delay min
+--------------------------------------------------------------------------
+Startpoint: b[18] (input port clocked by virtual_clk)
+Endpoint: sum[18] (output port clocked by virtual_clk)
+Path Group: virtual_clk
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock virtual_clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          1.00    1.00 ^ input external delay
+     1    0.00    0.10    0.00    1.00 ^ b[18] (in)
+                                         b[18] (net)
+                  0.10    0.00    1.00 ^ input42/A (sky130_fd_sc_hd__buf_1)
+     1    0.01    0.11    0.14    1.14 ^ input42/X (sky130_fd_sc_hd__buf_1)
+                                         net42 (net)
+                  0.11    0.00    1.14 ^ _242_/B (sky130_fd_sc_hd__ha_4)
+     3    0.03    0.09    0.18    1.33 ^ _242_/SUM (sky130_fd_sc_hd__ha_4)
+                                         CLA_BLOCK[4].p[2] (net)
+                  0.09    0.00    1.33 ^ _227_/B (sky130_fd_sc_hd__xnor2_4)
+     1    0.01    0.04    0.07    1.40 v _227_/Y (sky130_fd_sc_hd__xnor2_4)
+                                         net76 (net)
+                  0.04    0.00    1.40 v wire139/A (sky130_fd_sc_hd__buf_8)
+     1    0.01    0.02    0.11    1.51 v wire139/X (sky130_fd_sc_hd__buf_8)
+                                         net177 (net)
+                  0.02    0.00    1.51 v wire177/A (sky130_fd_sc_hd__buf_12)
+     1    5.00    2.29    1.70    3.21 v wire177/X (sky130_fd_sc_hd__buf_12)
+                                         sum[18] (net)
+                  2.30    0.09    3.30 v sum[18] (out)
+                                  3.30   data arrival time
+
+                  0.00    0.00    0.00   clock virtual_clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.00    0.00   clock reconvergence pessimism
+                         -1.00   -1.00   output external delay
+                                 -1.00   data required time
+-----------------------------------------------------------------------------
+                                 -1.00   data required time
+                                 -3.30   data arrival time
+-----------------------------------------------------------------------------
+                                  4.30   slack (MET)
+
+
+
+==========================================================================
+global route report_checks -path_delay max
+--------------------------------------------------------------------------
+Startpoint: b[0] (input port clocked by virtual_clk)
+Endpoint: sum[12] (output port clocked by virtual_clk)
+Path Group: virtual_clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock virtual_clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          1.00    1.00 ^ input external delay
+     1    0.00    0.10    0.00    1.00 ^ b[0] (in)
+                                         b[0] (net)
+                  0.10    0.00    1.00 ^ input33/A (sky130_fd_sc_hd__buf_1)
+     2    0.02    0.25    0.24    1.24 ^ input33/X (sky130_fd_sc_hd__buf_1)
+                                         net33 (net)
+                  0.25    0.00    1.24 ^ _256_/A (sky130_fd_sc_hd__ha_4)
+     2    0.02    0.05    0.26    1.51 v _256_/SUM (sky130_fd_sc_hd__ha_4)
+                                         CLA_BLOCK[0].p[0] (net)
+                  0.05    0.00    1.51 v _099_/A1 (sky130_fd_sc_hd__a211oi_4)
+     2    0.02    0.27    0.29    1.79 ^ _099_/Y (sky130_fd_sc_hd__a211oi_4)
+                                         _000_ (net)
+                  0.27    0.00    1.79 ^ _116_/A1 (sky130_fd_sc_hd__o21ai_2)
+     2    0.01    0.09    0.14    1.93 v _116_/Y (sky130_fd_sc_hd__o21ai_2)
+                                         _014_ (net)
+                  0.09    0.00    1.93 v _120_/A1 (sky130_fd_sc_hd__a21oi_2)
+     3    0.02    0.23    0.25    2.18 ^ _120_/Y (sky130_fd_sc_hd__a21oi_2)
+                                         _018_ (net)
+                  0.23    0.00    2.18 ^ _191_/A2 (sky130_fd_sc_hd__o21ai_2)
+     1    0.01    0.06    0.09    2.27 v _191_/Y (sky130_fd_sc_hd__o21ai_2)
+                                         CLA_BLOCK[3].c[0] (net)
+                  0.06    0.00    2.27 v _230_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.08    0.77    3.04 ^ _230_/SUM (sky130_fd_sc_hd__fa_4)
+                                         net70 (net)
+                  0.08    0.00    3.04 ^ wire157/A (sky130_fd_sc_hd__buf_8)
+     1    0.01    0.03    0.10    3.14 ^ wire157/X (sky130_fd_sc_hd__buf_8)
+                                         net192 (net)
+                  0.03    0.00    3.14 ^ wire192/A (sky130_fd_sc_hd__buf_8)
+     1    5.00    7.78    5.38    8.52 ^ wire192/X (sky130_fd_sc_hd__buf_8)
+                                         sum[12] (net)
+                  7.79    0.19    8.71 ^ sum[12] (out)
+                                  8.71   data arrival time
+
+                  0.00   10.00   10.00   clock virtual_clk (rise edge)
+                          0.00   10.00   clock network delay (ideal)
+                          0.00   10.00   clock reconvergence pessimism
+                         -1.00    9.00   output external delay
+                                  9.00   data required time
+-----------------------------------------------------------------------------
+                                  9.00   data required time
+                                 -8.71   data arrival time
+-----------------------------------------------------------------------------
+                                  0.29   slack (MET)
+
+
+
+==========================================================================
+global route report_checks -unconstrained
+--------------------------------------------------------------------------
+Startpoint: b[0] (input port clocked by virtual_clk)
+Endpoint: sum[12] (output port clocked by virtual_clk)
+Path Group: virtual_clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock virtual_clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          1.00    1.00 ^ input external delay
+     1    0.00    0.10    0.00    1.00 ^ b[0] (in)
+                                         b[0] (net)
+                  0.10    0.00    1.00 ^ input33/A (sky130_fd_sc_hd__buf_1)
+     2    0.02    0.25    0.24    1.24 ^ input33/X (sky130_fd_sc_hd__buf_1)
+                                         net33 (net)
+                  0.25    0.00    1.24 ^ _256_/A (sky130_fd_sc_hd__ha_4)
+     2    0.02    0.05    0.26    1.51 v _256_/SUM (sky130_fd_sc_hd__ha_4)
+                                         CLA_BLOCK[0].p[0] (net)
+                  0.05    0.00    1.51 v _099_/A1 (sky130_fd_sc_hd__a211oi_4)
+     2    0.02    0.27    0.29    1.79 ^ _099_/Y (sky130_fd_sc_hd__a211oi_4)
+                                         _000_ (net)
+                  0.27    0.00    1.79 ^ _116_/A1 (sky130_fd_sc_hd__o21ai_2)
+     2    0.01    0.09    0.14    1.93 v _116_/Y (sky130_fd_sc_hd__o21ai_2)
+                                         _014_ (net)
+                  0.09    0.00    1.93 v _120_/A1 (sky130_fd_sc_hd__a21oi_2)
+     3    0.02    0.23    0.25    2.18 ^ _120_/Y (sky130_fd_sc_hd__a21oi_2)
+                                         _018_ (net)
+                  0.23    0.00    2.18 ^ _191_/A2 (sky130_fd_sc_hd__o21ai_2)
+     1    0.01    0.06    0.09    2.27 v _191_/Y (sky130_fd_sc_hd__o21ai_2)
+                                         CLA_BLOCK[3].c[0] (net)
+                  0.06    0.00    2.27 v _230_/CIN (sky130_fd_sc_hd__fa_4)
+     1    0.01    0.08    0.77    3.04 ^ _230_/SUM (sky130_fd_sc_hd__fa_4)
+                                         net70 (net)
+                  0.08    0.00    3.04 ^ wire157/A (sky130_fd_sc_hd__buf_8)
+     1    0.01    0.03    0.10    3.14 ^ wire157/X (sky130_fd_sc_hd__buf_8)
+                                         net192 (net)
+                  0.03    0.00    3.14 ^ wire192/A (sky130_fd_sc_hd__buf_8)
+     1    5.00    7.78    5.38    8.52 ^ wire192/X (sky130_fd_sc_hd__buf_8)
+                                         sum[12] (net)
+                  7.79    0.19    8.71 ^ sum[12] (out)
+                                  8.71   data arrival time
+
+                  0.00   10.00   10.00   clock virtual_clk (rise edge)
+                          0.00   10.00   clock network delay (ideal)
+                          0.00   10.00   clock reconvergence pessimism
+                         -1.00    9.00   output external delay
+                                  9.00   data required time
+-----------------------------------------------------------------------------
+                                  9.00   data required time
+                                 -8.71   data arrival time
+-----------------------------------------------------------------------------
+                                  0.29   slack (MET)
+
+
+
+==========================================================================
+global route report_check_types -max_slew -max_cap -max_fanout -violators
+--------------------------------------------------------------------------
+max slew
+
+Pin                                    Limit    Slew   Slack
+------------------------------------------------------------
+wire172/X                               5.40    5.55   -0.15 (VIOLATED)
+wire206/X                               5.01    5.15   -0.15 (VIOLATED)
+wire207/X                               5.01    5.14   -0.13 (VIOLATED)
+wire192/X                               7.65    7.78   -0.13 (VIOLATED)
+wire211/X                               5.01    5.12   -0.11 (VIOLATED)
+wire171/X                               5.40    5.50   -0.10 (VIOLATED)
+wire173/X                               5.40    5.50   -0.10 (VIOLATED)
+wire214/X                               5.01    5.10   -0.09 (VIOLATED)
+wire205/X                               5.01    5.10   -0.09 (VIOLATED)
+wire202/X                               5.01    5.09   -0.08 (VIOLATED)
+wire176/X                               5.40    5.48   -0.08 (VIOLATED)
+wire204/X                               5.01    5.09   -0.08 (VIOLATED)
+wire212/X                               5.01    5.08   -0.07 (VIOLATED)
+wire216/X                               5.01    5.08   -0.07 (VIOLATED)
+wire213/X                               5.01    5.08   -0.07 (VIOLATED)
+wire184/X                               5.40    5.46   -0.06 (VIOLATED)
+wire179/X                               5.40    5.46   -0.06 (VIOLATED)
+wire215/X                               5.01    5.07   -0.06 (VIOLATED)
+wire166/X                               5.40    5.46   -0.06 (VIOLATED)
+wire209/X                               5.01    5.07   -0.06 (VIOLATED)
+wire201/X                               5.01    5.07   -0.06 (VIOLATED)
+wire193/X                               5.40    5.45   -0.05 (VIOLATED)
+wire180/X                               5.40    5.45   -0.05 (VIOLATED)
+wire165/X                               5.40    5.45   -0.05 (VIOLATED)
+wire210/X                               5.01    5.06   -0.05 (VIOLATED)
+wire195/X                               5.40    5.45   -0.05 (VIOLATED)
+wire177/X                               5.40    5.44   -0.04 (VIOLATED)
+wire203/X                               5.01    5.04   -0.04 (VIOLATED)
+wire198/X                               5.01    5.03   -0.02 (VIOLATED)
+wire217/X                               5.01    5.02   -0.01 (VIOLATED)
+wire200/X                               5.01    5.02   -0.01 (VIOLATED)
+wire208/X                               5.01    5.02   -0.01 (VIOLATED)
+wire199/X                               5.01    5.02   -0.01 (VIOLATED)
+
+max capacitance
+
+Pin                                    Limit     Cap   Slack
+------------------------------------------------------------
+wire206/X                               5.00    5.01   -0.01 (VIOLATED)
+
+wire204/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire207/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire214/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire211/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire172/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire205/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire203/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire212/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire213/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire202/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire215/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire216/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire184/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire209/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire192/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire201/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire210/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire171/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire173/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire217/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire198/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire177/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire166/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire193/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire195/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire176/X                               5.00    5.00   -0.00 (VIOLATED)
+
+wire179/X                               5.00    5.00   -0.00 (VIOLATED)
+
+
+==========================================================================
+global route max_slew_check_slack
+--------------------------------------------------------------------------
+-0.14633938670158386
+
+==========================================================================
+global route max_slew_check_limit
+--------------------------------------------------------------------------
+5.398754119873047
+
+==========================================================================
+global route max_slew_check_slack_limit
+--------------------------------------------------------------------------
+-0.0271
+
+==========================================================================
+global route max_fanout_check_slack
+--------------------------------------------------------------------------
+1.0000000150474662e+30
+
+==========================================================================
+global route max_fanout_check_limit
+--------------------------------------------------------------------------
+1.0000000150474662e+30
+
+==========================================================================
+global route max_capacitance_check_slack
+--------------------------------------------------------------------------
+-0.005411036312580109
+
+==========================================================================
+global route max_capacitance_check_limit
+--------------------------------------------------------------------------
+5.0
+
+==========================================================================
+global route max_capacitance_check_slack_limit
+--------------------------------------------------------------------------
+-0.0011
+
+==========================================================================
+global route max_slew_violation_count
+--------------------------------------------------------------------------
+max slew violation count 33
+
+==========================================================================
+global route max_fanout_violation_count
+--------------------------------------------------------------------------
+max fanout violation count 0
+
+==========================================================================
+global route max_cap_violation_count
+--------------------------------------------------------------------------
+max cap violation count 28
+
+==========================================================================
+global route setup_violation_count
+--------------------------------------------------------------------------
+setup violation count 0
+
+==========================================================================
+global route hold_violation_count
+--------------------------------------------------------------------------
+hold violation count 0
+
+==========================================================================
+global route critical path delay
+--------------------------------------------------------------------------
+8.7088
+
+==========================================================================
+global route critical path slack
+--------------------------------------------------------------------------
+0.2912
+
+==========================================================================
+global route slack div critical path delay
+--------------------------------------------------------------------------
+3.343744
+
+==========================================================================
+global route report_power
+--------------------------------------------------------------------------
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Combinational          2.46e-04   7.86e-03   1.77e-09   8.10e-03 100.0%
+Clock                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  2.46e-04   7.86e-03   1.77e-09   8.10e-03 100.0%
+                           3.0%      97.0%       0.0%

@@ -1,0 +1,59 @@
+OpenROAD 26Q4-1798-g6932b6296c 
+Features included (+) or not (-): -GPU +GUI
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 12 thread(s).
+read_liberty ./objects/binary_libs/sky130hd/sky130_fd_sc_hd__tt_025C_1v80@12800135-1794239217-af506811.blib
+read_db ./results/sky130hd/rca32/base/3_3_place_gp.odb
+read_sdc ./results/sky130hd/rca32/base/2_floorplan.sdc
+source /home/rajasrajas/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+estimate_parasitics
+Perform buffer insertion and gate resizing...
+repair_design -verbose -match_cell_footprint
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |       227
+       10 |     +4.8% |       5 |       5 |             5 |       217
+       20 |     +7.7% |       8 |       8 |             8 |       207
+       30 |    +11.3% |       9 |      11 |            11 |       197
+       40 |    +15.1% |      13 |      15 |            15 |       187
+       50 |    +17.7% |      16 |      18 |            18 |       177
+       60 |    +20.1% |      19 |      21 |            21 |       167
+       70 |    +23.5% |      23 |      25 |            25 |       157
+       80 |    +25.6% |      26 |      28 |            28 |       147
+       90 |    +27.8% |      29 |      31 |            31 |       137
+      100 |    +29.2% |      31 |      33 |            33 |       127
+      110 |    +29.2% |      31 |      33 |            33 |       117
+      120 |    +29.2% |      31 |      33 |            33 |       107
+      130 |    +29.2% |      31 |      33 |            33 |        97
+      140 |    +29.2% |      31 |      33 |            33 |        87
+      150 |    +29.2% |      31 |      33 |            33 |        77
+      160 |    +29.2% |      31 |      33 |            33 |        67
+      170 |    +29.2% |      31 |      33 |            33 |        57
+      180 |    +29.2% |      31 |      33 |            33 |        47
+      190 |    +29.2% |      31 |      33 |            33 |        37
+      200 |    +29.2% |      31 |      33 |            33 |        27
+      210 |    +29.2% |      31 |      33 |            33 |        17
+      220 |    +29.2% |      31 |      33 |            33 |         7
+    final |    +29.2% |      31 |      33 |            33 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0034] Found 33 slew violations.
+[INFO RSZ-0036] Found 33 capacitance violations.
+[INFO RSZ-0039] Resized 31 instances.
+[INFO RSZ-0038] Inserted 33 buffers in 33 nets.
+[INFO RSZ-0504] Runtime: 0.02s
+Floating nets: 
+Report metrics stage 3, resizer...
+No registers in design
+
+==========================================================================
+resizer report_design_area
+--------------------------------------------------------------------------
+Design area 2699 um^2 88% utilization.
+Instance count before 174, after 207
+Pin count before 356, after 422
+write_db ./results/sky130hd/rca32/base/3_4_place_resized.odb
+Elapsed time: 0:00.75[h:]min:sec. CPU time: user 0.56 sys 0.13 (92%). Peak memory: 228928KB.
+Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
+                                     s        s  Elapsed       MB [0:10)
+3_4_place_resized      .odb          0        1     0.92      223 6f0ae1a93d

@@ -1,0 +1,328 @@
+OpenROAD 26Q4-1798-g6932b6296c 
+Features included (+) or not (-): -GPU +GUI
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 12 thread(s).
+read_liberty ./objects/binary_libs/sky130hd/sky130_fd_sc_hd__tt_025C_1v80@12800135-1794239217-af506811.blib
+read_db ./results/sky130hd/cla32/base/3_2_place_iop.odb
+read_sdc ./results/sky130hd/cla32/base/2_floorplan.sdc
+source /home/rajasrajas/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+[INFO RSZ-0026] Removed 0 buffers.
+Perform port buffering...
+[INFO RSZ-0027] Inserted 65 sky130_fd_sc_hd__buf_1 input buffers.
+[INFO RSZ-0028] Inserted 33 sky130_fd_sc_hd__buf_1 output buffers.
+global_placement -density 0.6 -pad_left 0 -pad_right 0 -routability_driven -timing_driven -force_center_initial_place -min_phi_coef 0.95 -max_phi_coef 1.05
+[INFO GPL-0190] Using 6 of 12 threads for placement: one per core, SMT siblings idle.
+[INFO GPL-0001] ---- Initialize GPL Main Data Structures
+[INFO GPL-0002] DBU: 1000
+[INFO GPL-0003] SiteSize: (  0.460  2.720 ) um
+[INFO GPL-0004] CoreBBox: (  1.380  2.720 ) ( 85.100 84.320 ) um
+[INFO GPL-0016] Core area:                    6831.552 um^2
+[INFO GPL-0036] Movable instances area:       2910.291 um^2
+[INFO GPL-0037] Total instances area:         3030.406 um^2
+[INFO GPL-0035] Pin density area adjust:        46.661 um^2
+[INFO GPL-0032] ---- Initialize Region: Top-level
+[INFO GPL-0006] Number of instances:               364
+[INFO GPL-0007] Movable instances:                 268
+[INFO GPL-0008] Fixed instances:                    96
+[INFO GPL-0009] Dummy instances:                     0
+[INFO GPL-0010] Number of nets:                    373
+[INFO GPL-0011] Number of pins:                    941
+[INFO GPL-0012] Die BBox:       (  0.000  0.000 ) ( 86.485 86.485 ) um
+[INFO GPL-0013] Placement BBox: (  1.380  2.720 ) ( 85.100 84.320 ) um
+[INFO GPL-0014] Region name: top-level.
+[INFO GPL-0015] Region area:                  6831.552 um^2
+[INFO GPL-0017] Fixed instances area:          120.115 um^2
+[INFO GPL-0018] Movable instances area:       2956.952 um^2
+[INFO GPL-0019] Utilization:                    44.058 %
+[INFO GPL-0020] Standard cells area:          2956.952 um^2
+[INFO GPL-0021] Large instances area:            0.000 um^2
+[INFO GPL-0005] ---- Execute Conjugate Gradient Initial Placement.
+[INFO GPL-0051] Source of initial instance position counters:
+	Odb location = 0	Core center = 268	Region center = 0
+[InitialPlace]  Iter: 1 conjugate gradient residual: 0.00000011 HPWL: 6632317
+[InitialPlace]  Iter: 2 conjugate gradient residual: 0.00000010 HPWL: 7093668
+[InitialPlace]  Iter: 3 conjugate gradient residual: 0.00000011 HPWL: 6484074
+[InitialPlace]  Iter: 4 conjugate gradient residual: 0.00000010 HPWL: 6136924
+[InitialPlace]  Iter: 5 conjugate gradient residual: 0.00000007 HPWL: 5921242
+[INFO GPL-0033] ---- Initialize Nesterov Region: Top-level
+[INFO GPL-0023] Placement target density:       0.6000
+[INFO GPL-0024] Movable insts average area:     11.033 um^2
+[INFO GPL-0025] Ideal bin area:                 18.389 um^2
+[INFO GPL-0026] Ideal bin count:                   371
+[INFO GPL-0027] Total bin area:               6831.552 um^2
+[INFO GPL-0028] Bin count (X, Y):          16 ,     16
+[INFO GPL-0029] Bin size (W * H):       5.232 *  5.100 um
+[INFO GPL-0030] Number of bins:                    256
+[INFO GPL-0084] ---- Execute Nesterov Global Placement.
+[INFO GPL-0031] HPWL: Half-Perimeter Wirelength
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+        0 |   0.4504 |  3.245860e+03 |   +0.00% |  1.36e-12 |      
+[INFO GPL-0100] Timing-driven iteration 1/2, virtual: false.
+[INFO GPL-0101]    Iter: 1, overflow: 0.450, keep resizer changes at: 1, HPWL: 3245860
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |       373
+    final |    +34.1% |      33 |      33 |            33 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0034] Found 33 slew violations.
+[INFO RSZ-0036] Found 33 capacitance violations.
+[INFO RSZ-0039] Resized 33 instances.
+[INFO RSZ-0038] Inserted 33 buffers in 33 nets.
+   Iter   |    Area   | Removed | Inserted |   Pins
+          |           | Buffers | Buffers  | Remaining
+-------------------------------------------------------
+        0 |     +0.0% |       0 |        0 |       308
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire99/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire99/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire100/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire100/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire116/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire116/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire115/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire115/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire114/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire114/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire113/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire113/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire112/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire112/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire111/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire111/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire110/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire110/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire109/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire109/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire108/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire108/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire107/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire107/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire106/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire106/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire105/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire105/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire104/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire104/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire103/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire103/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire102/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire102/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire101/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire101/X after 1 rounds of buffering (no solution meets design rules)
+       30 |     -1.8% |      10 |        0 |       278
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire123/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire123/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire122/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire122/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire121/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire121/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire120/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire120/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire119/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire119/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire118/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire118/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire117/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire117/X after 1 rounds of buffering (no solution meets design rules)
+       60 |     -4.1% |      22 |        0 |       248
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire126/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire126/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire125/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire125/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire124/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire124/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire127/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire127/X after 1 rounds of buffering (no solution meets design rules)
+       90 |     -5.4% |      29 |        0 |       218
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire129/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire129/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire128/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire128/X after 1 rounds of buffering (no solution meets design rules)
+      120 |     -5.7% |      31 |        0 |       188
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire130/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire130/X after 1 rounds of buffering (no solution meets design rules)
+      150 |     -5.7% |      31 |        0 |       158
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire131/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire131/X after 1 rounds of buffering (no solution meets design rules)
+      180 |     -5.9% |      32 |        0 |       128
+      210 |     -5.9% |      32 |        0 |        98
+      240 |     -5.9% |      32 |        0 |        68
+      270 |     -6.1% |      33 |        0 |        38
+      300 |     -6.1% |      33 |        0 |         8
+    final |     -6.1% |      33 |        0 |         0
+-------------------------------------------------------
+[INFO GPL-0106] Timing-driven: worst slack 2.061903e-09
+[INFO GPL-0107] Timing-driven: repair_design delta area: 784.502 um^2 (+26.53%)
+[INFO GPL-0108] Timing-driven: repair_design, gpl delta gcells: 0 (+0.00%)
+[INFO GPL-0109] Timing-driven: repair_design, gcells created: 33, deleted: 33
+[INFO GPL-0110] Timing-driven: new target density: 0.71689045
+[INFO GPL-0038] Routability snapshot saved at iter = 1
+        0 |   0.4504 |  3.413060e+03 |          |           |      
+[INFO GPL-0111] Timing-driven: restarting Nesterov momentum.
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+       10 |   0.3702 |  3.376027e+03 |   +0.00% |  2.22e-12 |      
+       20 |   0.3590 |  3.366567e+03 |   -0.28% |  3.61e-12 |      
+       30 |   0.3646 |  3.362326e+03 |   -0.13% |  5.88e-12 |      
+       40 |   0.3652 |  3.360855e+03 |   -0.04% |  9.58e-12 |      
+       50 |   0.3642 |  3.362288e+03 |   +0.04% |  1.56e-11 |      
+       60 |   0.3622 |  3.362593e+03 |   +0.01% |  2.54e-11 |      
+       70 |   0.3632 |  3.360895e+03 |   -0.05% |  4.14e-11 |      
+       80 |   0.3639 |  3.361369e+03 |   +0.01% |  6.74e-11 |      
+       90 |   0.3632 |  3.362191e+03 |   +0.02% |  1.10e-10 |      
+      100 |   0.3619 |  3.362103e+03 |   -0.00% |  1.79e-10 |      
+      110 |   0.3607 |  3.361736e+03 |   -0.01% |  2.91e-10 |      
+      120 |   0.3595 |  3.361703e+03 |   -0.00% |  4.75e-10 |      
+      130 |   0.3575 |  3.362144e+03 |   +0.01% |  7.73e-10 |      
+      140 |   0.3542 |  3.363048e+03 |   +0.03% |  1.26e-09 |      
+      150 |   0.3498 |  3.364815e+03 |   +0.05% |  2.01e-09 |      
+      160 |   0.3462 |  3.367023e+03 |   +0.07% |  2.96e-09 |      
+      170 |   0.3426 |  3.371916e+03 |   +0.15% |  4.36e-09 |      
+      180 |   0.3362 |  3.379690e+03 |   +0.23% |  6.43e-09 |      
+      190 |   0.3266 |  3.390039e+03 |   +0.31% |  9.47e-09 |      
+      200 |   0.3147 |  3.405055e+03 |   +0.44% |  1.40e-08 |      
+[INFO GPL-0040] Routability pass 1: weighted congestion 0.6001 (target 1.0100), 0 of 89 actionable tiles overflowed (0.0%).
+[INFO GPL-0050] Weighted routing congestion is lower than target routing congestion(1.0100), end routability optimization.
+[INFO GPL-0090] Routability finished. Target routing congestion achieved succesfully.
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+      210 |   0.2969 |  3.420307e+03 |   +0.45% |  2.06e-08 |      
+      220 |   0.2770 |  3.433372e+03 |   +0.38% |  3.03e-08 |      
+      230 |   0.2574 |  3.453458e+03 |   +0.59% |  4.46e-08 |      
+      240 |   0.2297 |  3.467841e+03 |   +0.42% |  6.57e-08 |      
+      250 |   0.2079 |  3.490689e+03 |   +0.66% |  9.68e-08 |      
+[INFO GPL-0100] Timing-driven iteration 2/2, virtual: false.
+[INFO GPL-0101]    Iter: 256, overflow: 0.193, keep resizer changes at: 1, HPWL: 3502040
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |       373
+    final |    +15.5% |      28 |      33 |            33 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0034] Found 33 slew violations.
+[INFO RSZ-0036] Found 33 capacitance violations.
+[INFO RSZ-0039] Resized 28 instances.
+[INFO RSZ-0038] Inserted 33 buffers in 33 nets.
+   Iter   |    Area   | Removed | Inserted |   Pins
+          |           | Buffers | Buffers  | Remaining
+-------------------------------------------------------
+        0 |     +0.0% |       0 |        0 |       308
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire133/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire133/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire132/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire132/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire149/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire149/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire148/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire148/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire147/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire147/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire146/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire146/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire145/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire145/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire144/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire144/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire143/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire143/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire142/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire142/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire141/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire141/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire140/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire140/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire139/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire139/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire138/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire138/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire137/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire137/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire136/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire136/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire135/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire135/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire134/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire134/X after 1 rounds of buffering (no solution meets design rules)
+       30 |     -4.1% |      10 |        0 |       278
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire156/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire156/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire155/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire155/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire154/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire154/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire153/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire153/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire152/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire152/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire151/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire151/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire150/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire150/X after 1 rounds of buffering (no solution meets design rules)
+       60 |     -8.8% |      22 |        0 |       248
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire159/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire159/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire158/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire158/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire157/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire157/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire160/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire160/X after 1 rounds of buffering (no solution meets design rules)
+       90 |    -11.6% |      29 |        0 |       218
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire162/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire162/X after 1 rounds of buffering (no solution meets design rules)
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire161/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire161/X after 1 rounds of buffering (no solution meets design rules)
+      120 |    -12.7% |      31 |        0 |       188
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire163/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire163/X after 1 rounds of buffering (no solution meets design rules)
+      150 |    -12.7% |      31 |        0 |       158
+[WARNING RSZ-2009] Skipping buffering because no valid buffering solution satisfying the design rules can be found for net connected to pin wire164/X.
+[WARNING RSZ-2005] cannot find a viable buffering solution on pin wire164/X after 1 rounds of buffering (no solution meets design rules)
+      180 |    -13.0% |      32 |        0 |       128
+      210 |    -13.0% |      32 |        0 |        98
+      240 |    -13.0% |      32 |        0 |        68
+      270 |    -13.5% |      33 |        0 |        38
+      300 |    -13.5% |      33 |        0 |         8
+    final |    -13.5% |      33 |        0 |         0
+-------------------------------------------------------
+[INFO GPL-0106] Timing-driven: worst slack 2.070073e-09
+[INFO GPL-0107] Timing-driven: repair_design delta area: 0.000 um^2 (+0.00%)
+[INFO GPL-0108] Timing-driven: repair_design, gpl delta gcells: 0 (+0.00%)
+[INFO GPL-0109] Timing-driven: repair_design, gcells created: 33, deleted: 33
+[INFO GPL-0110] Timing-driven: new target density: 0.71689045
+[INFO GPL-0111] Timing-driven: restarting Nesterov momentum.
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+      260 |   0.1991 |  3.568709e+03 |   +0.00% |  1.43e-07 |      
+      270 |   0.1664 |  3.584985e+03 |   +0.46% |  2.10e-07 |      
+      280 |   0.1395 |  3.604930e+03 |   +0.56% |  3.09e-07 |      
+      290 |   0.1195 |  3.626186e+03 |   +0.59% |  4.56e-07 |      
+      300 |   0.1032 |  3.642862e+03 |   +0.46% |  6.72e-07 |      
+      303 |   0.0983 |  3.648995e+03 |          |  7.84e-07 |      
+---------------------------------------------------------------
+[INFO GPL-1001] Global placement finished at iteration 303
+[INFO GPL-1017] Routability mode iteration count: 208
+[INFO GPL-1005] Routability final weighted congestion: 0.4702
+[INFO GPL-1002] Placed Cell Area             3741.4548
+[INFO GPL-1003] Available Free Area          6711.4368
+[INFO GPL-1004] Minimum Feasible Density        0.4500 (cell_area / free_area)
+[INFO GPL-1006]   Suggested Target Densities:
+[INFO GPL-1007]     - For 90% usage of free space: 0.6194
+[INFO GPL-1008]     - For 80% usage of free space: 0.6968
+[INFO GPL-1011] Original area (um^2): 2956.95
+[INFO GPL-1012] Total routability artificial inflation: 0.00 (+0.00%)
+[INFO GPL-1013] Total timing-driven delta area: 784.50 (+26.53%)
+[INFO GPL-1014] Final placement area: 3741.45 (+26.53%)
+[INFO GPL-1018] Final HPWL (um): 3652.43
+estimate_parasitics
+Report metrics stage 3, global place...
+
+==========================================================================
+global place report_design_area
+--------------------------------------------------------------------------
+Design area 3815 um^2 56% utilization.
+write_db ./results/sky130hd/cla32/base/3_3_place_gp.odb
+Elapsed time: 0:01.98[h:]min:sec. CPU time: user 1.16 sys 1.31 (125%). Peak memory: 336420KB.
+Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
+                                     s        s  Elapsed       MB [0:10)
+3_3_place_gp           .odb          1        2     1.25      328 5dca9cfff0

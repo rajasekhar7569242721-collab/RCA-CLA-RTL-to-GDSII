@@ -1,0 +1,25 @@
+
+23. Printing statistics.
+
+=== rca32 ===
+
+        +----------------------------Count including submodules.
+        |        +-------------------Area including submodules.
+        |        |        +----------Local count, excluding submodules.
+        |        |        |        +-Local area, excluding submodules.
+        |        |        |        | 
+       36        -       36        - wires
+      129        -      129        - wire bits
+       36        -       36        - public wires
+      129        -      129        - public wire bits
+        5        -        5        - ports
+       98        -       98        - port bits
+        -        -        -        - memories
+        -        -        -        - memory bits
+        -        -        -        - processes
+       32  640.614       32  640.614 cells
+       32  640.614       32  640.614   sky130_fd_sc_hd__fa_1
+
+   Chip area for module '\rca32': 640.614400
+     of which used for sequential elements: 0.000000 (0.00%)
+
